@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class ReverseArray {
     static void reversearray(int arr[], int start, int end) {
         int temp;
-        // iterative approach o(n) Time complexity
+        // 2-pointer iterative approach
+//       Time complexity: O(n)
+//       Space complexity: O(1)
 //        while (start < end) {
 //            temp = arr[start];
 //            arr[start] = arr[end];
@@ -14,7 +16,9 @@ public class ReverseArray {
 //            end--;
 //        }
 
-        // Recursive approach o(n)
+        // Recursive approach
+//       Time complexity: O(n)
+//       Space complexity: O(1)
         if (start >= end) {
             return;
         } else {

@@ -19,8 +19,9 @@ public class SubarraywithZeroSum {
             sum = sum + i;
             if (a.contains(sum) || sum == 0) {
                 return true;
+            } else {
+                a.add(sum);
             }
-            a.add(sum);
         }
         return false;
     }

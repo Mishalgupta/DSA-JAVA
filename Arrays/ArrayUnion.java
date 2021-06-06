@@ -30,7 +30,7 @@ class ArrayUnion {
         System.out.print(arr1[0] + " ");
 
         // Incrementing the First element's count
-        // in it's corresponding index in newtable
+        // in it's corresponding index in new table
         ++newtable[arr1[0]];
 
         // Starting traversing the first
@@ -47,7 +47,7 @@ class ArrayUnion {
 
         // Finding only non common
         // elements from 2nd array
-        for (int j = 0; j < arr2.length; j++) // o(m-1) times
+        for (int j = 0; j < arr2.length; j++) // o(m) times
         {
             // By checking whether it's already
             // present in new table or not
@@ -59,8 +59,8 @@ class ArrayUnion {
     }
 
     public static void main(String args[]) {
-        int arr1[] = { 1, 2, 2, 2, 3, 5, 6, 7, 8, 9 };
-        int arr2[] = { 2, 3, 4, 5, 5, 6, 7, 10, 12, 13, 14 };
+        int arr1[] = { 11, 2, 2, 2, 3, 5, 6, 7, 8, 9 };
+        int arr2[] = { 11, 2, 3, 4, 5, 5, 6, 7, 10, 12, 13, 14 };
 
         UnionArray(arr1, arr2);
     }
@@ -69,7 +69,7 @@ class ArrayUnion {
     // Java program to find union of
     // two sorted arrays
     /*
-     * Function prints union of arr1[] and arr2[] m is the number of elements in
+     * Function prints union of arr1[] and arr2[] , m is the number of elements in
      * arr1[] n is the number of elements in arr2[]
      */
 //    static int printUnion(int arr1[], int arr2[], int m, int n) {
@@ -86,7 +86,7 @@ class ArrayUnion {
 //        }
 //
 //        /*
-//         * Print remaining elements of the larger array
+//         * Print remaining elements of the larger array if one of i or j crosses the above while loop
 //         */
 //        while (i < m)
 //            System.out.print(arr1[i++] + " ");

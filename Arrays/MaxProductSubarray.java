@@ -35,7 +35,6 @@ public class MaxProductSubarray {
         // Expected Auxiliary Space: O(1) constant space
         long minVal = arr[0];
         long maxVal = arr[0];
-
         long maxProduct = arr[0];
 
         for (int i = 1; i < n; i++) // n times complexity

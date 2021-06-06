@@ -28,7 +28,7 @@ public class MinimumJump {
 //                We used up a step to get to the current index, so steps has to be decreased.
 //                step--;
 //                If no more steps are remaining (i.e. steps=0, then we must have used a jump. Therefore increase jump. 
-//                Since we know that it is possible to reach maxrange, we again initialize the steps to the number of steps to reach 
+//                Since we know that it is possible to reach max range, we again initialize the steps to the number of steps to reach 
 //                maxReach from position i. But before re-initializing step, we also check whether a step is becoming zero or negative.
 //                In this case, It is not possible to reach further.
 //                if (step == 0) {

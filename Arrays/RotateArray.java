@@ -2,9 +2,10 @@ package Arrays;
 
 public class RotateArray {
     static void rotate(int a[], int n) {
+        // O(n) time complexity
+        // O(1) space complexity
         int temp = a[n - 1];
-        for (int i = n - 1; i > 0; i--) // O(n) time complexity
-        {
+        for (int i = n - 1; i > 0; i--) {
             a[i] = a[i - 1];
         }
         a[0] = temp;

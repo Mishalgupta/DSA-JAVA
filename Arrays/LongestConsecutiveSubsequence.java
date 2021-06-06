@@ -19,7 +19,7 @@ public class LongestConsecutiveSubsequence {
 ////        v.add(10);
 //
 //        // Insert repeated elements
-//        // only once in the vector
+//        // only once in the array
 //        for (int i = 1; i < N; i++) {
 //            if (arr[i] != arr[i - 1])
 //                v.add(arr[i]);
@@ -96,7 +96,7 @@ public class LongestConsecutiveSubsequence {
 //        int a[] = { 2, 6, 1, 9, 4, 5, 3 };
         int a[] = { 1, 9, 3, 10, 4, 20, 2 };
         int N = a.length;
-        System.out.println("Longestr sequnece is: " + findLongestConseqSubseq(a, N));
+        System.out.println("Longest sequnece is: " + findLongestConseqSubseq(a, N));
     }
 
 }

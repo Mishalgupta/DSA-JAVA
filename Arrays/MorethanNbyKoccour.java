@@ -7,7 +7,7 @@ public class MorethanNbyKoccour {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int occour = 0;
         int num = arr.length / k;
-        System.out.println(num);
+//        System.out.println(num);
         for (int i = 0; i < arr.length; i++) {
             if (map.containsKey(arr[i])) {
                 // this will count the no. of occours at each key.

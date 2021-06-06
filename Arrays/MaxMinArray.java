@@ -19,6 +19,7 @@ public class MaxMinArray {
 //
 //        Pair minmax = new Pair();
 //        int i;
+    // if only 1 element is there
 //        if (n == 1) {
 //            minmax.max = arr[0];
 //            minmax.min = arr[0];
@@ -50,8 +51,8 @@ public class MaxMinArray {
 // T(n) = 2T(n/2) + 2
 //    After solving the above recursion, we get 
 //    T(n)  = 3n/2 -2
-//    Thus, the approach does 3n/2 -2 comparisons if n is a power of 2.
-//    And it does more than 3n/2 -2 comparisons if n is not a power of 2.
+//    Thus, the approach does 3n/2 -2 comparisons if n is a power of 2.(even size if array)
+//    And it does more than 3n/2 -2 comparisons if n is not a power of 2(odd size of array)
 
     static Pair getminmax(int arr[], int low, int high) {
         Pair minmax = new Pair();
@@ -66,7 +67,7 @@ public class MaxMinArray {
             return minmax;
         }
 
-        // if 2 or more than 2 elements are there
+        // if 2 elements are there
 
         if (high == low + 1) {
             if (arr[low] > arr[high]) {
@@ -79,6 +80,7 @@ public class MaxMinArray {
             return minmax;
         }
 
+        // if 2 or more than 2 elements are there
         mid = (low + high) / 2; // 1 times
         mml = getminmax(arr, low, mid); // T(n/2)
         mmr = getminmax(arr, mid + 1, high); // T(n/2)

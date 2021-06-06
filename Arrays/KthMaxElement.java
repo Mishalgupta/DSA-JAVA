@@ -3,7 +3,7 @@ package Arrays;
 import java.util.*;
 
 public class KthMaxElement {
-
+    // Method-1
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Array Size");
@@ -28,6 +28,8 @@ public class KthMaxElement {
             }
         }
 //        System.out.println(pq);
+        // since we need max so we need to make it reverseOrder()
+        // as PQ is by default set for min.
         ArrayList<Integer> arr = new ArrayList<Integer>(pq);
         Collections.sort(arr, Collections.reverseOrder());
         System.out.print("Top k max elements are: ");

@@ -1,6 +1,6 @@
 package Arrays;
 
-import java.util.*;
+//import java.util.*;
 
 public class MinimizetheHeights {
     // Method-1
@@ -26,14 +26,11 @@ public class MinimizetheHeights {
 //        return result; // 1 times
 //    }
 
-    // Method-2 Time Complexity: O(n Log n)
+    // Method-2 Time Complexity: O(n)
     // 1+n-1+ nlog(n)=O(n) Times
     static int getMinDiff(int arr[], int n, int k) {
         if (n == 1)
             return 0;
-
-        // Sort all elements
-        Arrays.sort(arr); // nlog(n)
 
         // Initialize result
         int ans = arr[n - 1] - arr[0];
@@ -78,10 +75,11 @@ public class MinimizetheHeights {
     }
 
     public static void main(String[] args) {
-//        int arr[] = { 4, 6 };
-        int arr[] = { 3, 9, 12, 16, 20 };
+        int arr[] = { 1, 5, 8, 10 };
+        int k = 2;
+//        int arr[] = { 3, 9, 12, 16, 20 };
         int n = arr.length;
-        int k = 3;
+//        int k = 3;
         System.out.println("Maximum difference is " + getMinDiff(arr, n, k));
     }
 

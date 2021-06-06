@@ -31,7 +31,7 @@ public class MinMergeOperationsTomakeArrayPalindrome {
 //    Therefore this problem can be solved iteratively using two pointers (first pointer pointing to start of the array and
 //    second pointer pointing to the last element of the array) method and keeping count of total merging operations done till now.
     public static void main(String[] args) {
-//        int Farr[] = new int[] { 15, 4, 15 };
+//        int arr[] = new int[] { 15, 4, 15 };
         int arr[] = { 1, 4, 5, 11 };
         int n = arr.length;
         System.out.println("Min. no. of operations is:  " + merge(arr, n));

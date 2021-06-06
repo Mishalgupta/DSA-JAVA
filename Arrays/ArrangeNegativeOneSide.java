@@ -3,7 +3,9 @@ package Arrays;
 public class ArrangeNegativeOneSide {
 //    public static void negative(int arr[], int n) {
 //        int temp = 0;
-    // o(n^2) time complexity
+    // O(n^2) time complexity
+    // O(1) space complexity
+    // method bubble sorting
 //        for (int i = 0; i < n; i++) {
 //            for (int j = 0; j < n; j++) {
 //                if (arr[j + 1] < arr[j]) {
@@ -29,12 +31,6 @@ public class ArrangeNegativeOneSide {
 //            }
 //        }
 
-//    }
-
-//    public static void printarray(int arr[], int n) {
-//        for (int i = 0; i < n; i++) {
-//            System.out.print(arr[i] + " ");
-//        }
 //    }
 
     // using two pointers(two variables)
