@@ -1,8 +1,6 @@
 package Searching_Sorting;
 
 public class EkoSpoj {
-
-    // Function to find minimum number of pages.
     public static int findHeight(int[] a, int n, int m) {
         // Method- Binary search
 //        Expected Time Complexity: O(NlogN)
@@ -11,8 +9,7 @@ public class EkoSpoj {
         int start = 0;
         int end = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
-            end = Math.max(start, a[i]);
-            end = end + a[i];
+            end = Math.max(end, a[i]);
         }
 //   ......................
         int res = -1;
@@ -46,11 +43,11 @@ public class EkoSpoj {
 
     public static void main(String[] args) {
         // heights of trees
-//      int a[] = { 20, 15, 10, 17 };
-        int a[] = { 4, 42, 40, 26, 46 };
+        int a[] = { 20, 15, 10, 17 };
+//        int a[] = { 4, 42, 40, 26, 46 };
         // Mirko's required wood amount
-//      int m = 7;
-        int m = 20;
+        int m = 7;
+//        int m = 20;
         int n = a.length;
         System.out.println("maximum integer height is: " + findHeight(a, n, m));
     }

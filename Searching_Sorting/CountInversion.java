@@ -55,6 +55,7 @@ public class CountInversion {
             } else {
                 b[k] = a[j++];
                 count = count + (m + 1 - i);
+                System.out.println(count);
             }
             k++;
         }
@@ -74,6 +75,7 @@ public class CountInversion {
         for (i = (int) l; i <= (int) r; i++) {
             a[i] = b[i];
         }
+//        System.out.println(count);
         return count;
     }
 
