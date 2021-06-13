@@ -10,8 +10,8 @@ public class ReverseLinkedListInGroupsOfGivenSize {
         }
     }
 
-    // Method-1 iterative method iterative method(if issue of k multiple)
-    // Expected Time Complexity: O((N/k)*k).
+    // Method-1 iterative method(if issue of k multiple)
+    // Expected Time Complexity: O((N/k)*k) = O(N).
 //    since we have done k iteration for each step
     // Expected Auxiliary Space: O(1).
 //    public static node reverse(node head, int k) {
