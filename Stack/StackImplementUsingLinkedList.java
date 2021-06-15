@@ -88,7 +88,6 @@ public class StackImplementUsingLinkedList {
     }
 
     public static void main(String[] args) {
-//        stack obj = new stack();
         StackImplementUsingLinkedList obj = new StackImplementUsingLinkedList();
         // insert Stack value
         obj.push(11);
