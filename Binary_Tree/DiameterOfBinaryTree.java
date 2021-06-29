@@ -1,20 +1,19 @@
 package Binary_Tree;
 
-class Node {
-    int data;
-    Node left, right;
-
-    public Node(int item) {
-        data = item;
-        left = right = null;
-    }
-}
-
 public class DiameterOfBinaryTree {
-    Node root;
+    // Time: O(N)
+    // Space: O(N)
+    static class Node {
+        int data;
+        Node left, right;
 
+        public Node(int item) {
+            data = item;
+            left = right = null;
+        }
+    }
 
-    int height(Node node) {
+    static int height(Node node) {
         if (node == null) {
             return 0;
         }
@@ -22,7 +21,7 @@ public class DiameterOfBinaryTree {
     }
 
     // Function to return the diameter of a Binary Tree.
-    int diameter(Node root) {
+    static int diameter(Node root) {
         if (root == null) {
             return 0;
         }
@@ -35,12 +34,11 @@ public class DiameterOfBinaryTree {
     }
 
     public static void main(String[] args) {
-        DiameterOfBinaryTree tree = new DiameterOfBinaryTree();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
 
         // Function Call
         System.out.println("The diameter of given binary tree is : " + diameter(root));

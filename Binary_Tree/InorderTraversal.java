@@ -4,25 +4,31 @@ import java.util.Stack;
 
 public class InorderTraversal {
 
-    // Root of Binary Tree
-    Node root;
+    // Binary tree node
+    private static class Node {
+        int data;
+        Node left, right;
 
-    InorderTraversal() {
-        root = null;
+        public Node(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
     }
 
     // Method 1- Recursive
 //    Expected Time Complexity: O(N).
 //    Expected Auxiliary Space: O(N).
-//    void printInorder(Node node) {
-//        if (node == null)
+//    static void printInorder(Node node) {
+//        if (node == null) {
 //            return;
+//        }
 //
-//        // first deal with the node
-//        System.out.print(node.key + " ");
-//
-//        // now recur on left subtree
+//        // first recur on left subtree
 //        printInorder(node.left);
+//
+//        // now deal with the node
+//        System.out.print(node.data + " ");
 //
 //        // then recur on right subtree
 //        printInorder(node.right);
@@ -31,7 +37,7 @@ public class InorderTraversal {
     // Method 2- iterative
 //  Expected Time Complexity: O(N).
 //  Expected Auxiliary Space: O(N). 
-    void printInorder(Node root) {
+    static void printInorder(Node root) {
         if (root == null) {
             return;
         }
@@ -48,27 +54,23 @@ public class InorderTraversal {
                 // if the current node is null, pop an element from the stack,
                 // print it, and finally set the current node to its right child.
                 curr = stack.pop();
-                System.out.print(curr.key + " ");
+                System.out.print(curr.data + " ");
                 curr = curr.right;
             }
         }
     }
 
-    void printInorder() {
-        printInorder(root);
-    }
-
     // Driver method
     public static void main(String[] args) {
-        InorderTraversal tree = new InorderTraversal();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
-
+        // construct binary tree as shown in
+        // above diagram
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
         System.out.println("Inorder traversal of binary tree is: ");
-        tree.printInorder();
+        printInorder(root);
     }
 
 }

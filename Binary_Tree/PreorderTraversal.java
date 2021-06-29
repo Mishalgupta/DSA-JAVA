@@ -3,34 +3,39 @@ package Binary_Tree;
 import java.util.Stack;
 
 public class PreorderTraversal {
-    // Root of Binary Tree
-    Node root;
+    // Binary tree node
+    private static class Node {
+        int data;
+        Node left, right;
 
-    PreorderTraversal() {
-        root = null;
+        public Node(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
     }
 
     // Method 1- Recursive
 //    Expected Time Complexity: O(N).
 //    Expected Auxiliary Space: O(N).
-//    void printPreorder(Node node) {
+//    static void printPreorder(Node node) {
 //        if (node == null)
 //            return;
-//        // first recur on right subtree
-//        printPreorder(node.right);
-//
-//        // then deal with the node
-//        System.out.print(node.key + " ");
+//        // first deal with the node
+//        System.out.print(node.data + " ");
 //
 //        // now recur on left subtree
 //        printPreorder(node.left);
+//
+//        // then recur on right subtree
+//        printPreorder(node.right);
 //
 //    }
 
     // Method 2- iterative
 //  Expected Time Complexity: O(N).
 //  Expected Auxiliary Space: O(N). 
-    void printPreorder(Node root) {
+    static void printPreorder(Node root) {
         if (root == null) {
             return;
         }
@@ -38,7 +43,7 @@ public class PreorderTraversal {
         stack.push(root);
         while (!stack.empty()) {
             Node curr = stack.pop();
-            System.out.print(curr.key + " ");
+            System.out.print(curr.data + " ");
             if (curr.right != null) {
                 stack.push(curr.right);
             }
@@ -48,21 +53,18 @@ public class PreorderTraversal {
         }
     }
 
-    void printPreorder() {
-        printPreorder(root);
-    }
-
     // Driver method
     public static void main(String[] args) {
-        PreorderTraversal tree = new PreorderTraversal();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
+        // construct binary tree as shown in
+        // above diagram
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
 
         System.out.println("Preorder traversal of binary tree is ");
-        tree.printPreorder();
+        printPreorder(root);
     }
 
 }

@@ -2,10 +2,11 @@ package Binary_Tree;
 
 import java.util.*;
 
-public class LevelOrderTraversal {
-//    Method-Using queue
-//Expected Time Complexity: O(N)
-//Expected Auxiliary Space: O(N)
+public class DiagonalTraversalOfBTree {
+
+//  Method - Using recursive
+//Expected time complexity: O(N)
+//Expected auxiliary space: O(N)
     // Binary tree node
     private static class Node {
         int data;
@@ -18,29 +19,24 @@ public class LevelOrderTraversal {
         }
     }
 
-    // function to print level order traversal of binary tree
-    private static void printLeftView(Node root) {
+    static void Diagonal(Node root) {
         if (root == null) {
             return;
         }
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
-
-        while (!queue.isEmpty()) {
-            Node temp = queue.poll();
-            System.out.print(temp.data + " ");
-            // Add left node to queue
-            if (temp.left != null) {
-                queue.add(temp.left);
-            }
-            // Add right node to queue
-            if (temp.right != null) {
-                queue.add(temp.right);
+        Queue<Node> qu = new ArrayDeque<>();
+        qu.add(root);
+        while (!qu.isEmpty()) {
+            Node curr = qu.poll();
+            while (curr != null) {
+                if (curr.left != null) {
+                    qu.add(curr.left);
+                }
+                System.out.print((curr.data + " "));
+                curr = curr.right;
             }
         }
     }
 
-    // Driver code
     public static void main(String[] args) {
         // construct binary tree as shown in
         // above diagram
@@ -52,7 +48,8 @@ public class LevelOrderTraversal {
         root.right.right = new Node(15);
         root.right.left = new Node(12);
         root.right.right.left = new Node(14);
-        System.out.println("Level order traversal is:");
-        printLeftView(root);
+        System.out.println("Diagonal Traversal of Tree : ");
+        Diagonal(root);
     }
+
 }
