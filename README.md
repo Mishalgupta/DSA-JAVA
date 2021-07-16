@@ -1,1 +1,1 @@
-Here is my all Geeks for Geeks, Leetcode practice solutions.
+Here is all my Data structures & algorithm practice solutions.
