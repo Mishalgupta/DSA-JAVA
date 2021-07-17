@@ -10,7 +10,7 @@ public class PallindromeString {
         for (int i = n - 1; i >= 0; i--) {
             s = s + S.charAt(i);
         }
-        System.out.println(s);
+//        System.out.println(s);
         if (S.equalsIgnoreCase(s)) {
             return 1;
         } else {
@@ -21,7 +21,7 @@ public class PallindromeString {
     public static void main(String[] args) {
 //        String str = new String("Mishal");
         String str = new String("abba");
-        System.out.println(isPlaindrome(str));
+        System.out.println("String is pallindome: " + isPlaindrome(str));
 
     }
 

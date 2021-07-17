@@ -7,15 +7,15 @@ public class DuplicateInStrings {
     static final int NO_OF_CHARS = 256;
 
 //    Time Complexity: O(n), where n = length of the string passed
-//            Space Complexity: O(NO_OF_CHARS)
+//    Space Complexity: O(NO_OF_CHARS)
     public static void printDups(String str) {
 //        Method-1
 //        int count[] = new int[NO_OF_CHARS];
-//// this will count the character occourence
+//        this will count the character occourence
 //        for (int i = 0; i < str.length(); i++) {
 //            count[str.charAt(i)]++;
 //        }
-////        System.out.println(count[str.charAt(i)]);
+//        System.out.println(count[str.charAt(i)]);
 //        for (int i = 0; i < NO_OF_CHARS; i++) {
 //            if (count[i] > 1) {
 //                System.out.println((char) i + "," + count[i]);
@@ -33,8 +33,6 @@ public class DuplicateInStrings {
                 hash.put(str.charAt(i), 1);
 //                System.out.println(hash.put(str.charAt(i), 1));
             } else {
-//                hash.get(str.charAt(i) + 1);
-//                System.out.println(hash.get(str.charAt(i) + 1));
                 hash.put(str.charAt(i), hash.get(str.charAt(i)) + 1);
 //                System.out.println(hash.put(str.charAt(i), hash.get(str.charAt(i)) + 1));
             }

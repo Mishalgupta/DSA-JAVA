@@ -1,6 +1,8 @@
 package Strings;
 
 public class ReverseString {
+//    Expected Time Complexity: O(|S|).
+//    Expected Auxiliary Space: O(1).
     static char[] reverse(char s[], int n) {
         char ch[] = new char[n];
         int start = 0, end = n - 1;
@@ -11,7 +13,6 @@ public class ReverseString {
             start++;
             end--;
             ch = s;
-
         }
         return ch;
     }
@@ -23,5 +24,4 @@ public class ReverseString {
         System.out.println(reverse(ch, n));
 
     }
-
 }
