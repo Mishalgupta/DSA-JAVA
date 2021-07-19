@@ -7,8 +7,8 @@ import java.util.*;
 public class KthSmallestElement {
     // we need to use max. heap as we need smallest element. so for this we use
     // priority queue.
-//    Expected Time Complexity: O(n)
-//    Expected Auxiliary Space: O(1)
+//    Expected Time Complexity:  O(k + (n-k)*Logk) or O(klogk) 
+//    Expected Auxiliary Space: O(n)
     public static int kthSmallest(int[] arr, int l, int r, int k) {
         int n = arr.length;
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>(Collections.reverseOrder());
