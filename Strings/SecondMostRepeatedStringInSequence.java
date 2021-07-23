@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SecondMostRepeatedStringInSequence {
 //    Expected Time Complexity: O(N*max(|Si|).
-//            Expected Auxiliary Space: O(N).
+//    Expected Auxiliary Space: O(N).
     static String secFrequent(String arr[], int N) {
         HashMap<String, Integer> hs = new HashMap<>();
         int max = 0;
