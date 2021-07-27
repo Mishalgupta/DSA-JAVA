@@ -4,10 +4,9 @@ package Arrays;
 //Merge the two arrays into one sorted array in non-decreasing order without using any extra space.
 
 public class MergeWithoutExtraSpace {
+    // Method-1 using GAP method
 //    Expected Time Complexity: O((n+m)*log(n+m))
 //    Expected Auxiliary Space: O(1)
-
-    // Method-1 using GAP method
     public static int Gap(int gap) {
         if (gap <= 1) {
             return 0;
@@ -55,6 +54,8 @@ public class MergeWithoutExtraSpace {
     }
 
     // Method-2
+//  Expected Time Complexity: O((n+m)*log(n+m))
+//  Expected Auxiliary Space: O(1)
 //        int i = n - 1, j = 0;
 //        while (i >= 0 && j < m) {
 //            if (arr1[i] > arr2[j]) {
@@ -77,12 +78,12 @@ public class MergeWithoutExtraSpace {
         merge(arr1, arr2, n, m);
         StringBuffer str = new StringBuffer();
         for (int i = 0; i < n; i++) {
-            str.append(arr1[i]);
+            str.append(arr1[i] + " ");
         }
         for (int i = 0; i < m; i++) {
-            str.append(arr2[i]);
+            str.append(arr2[i] + " ");
         }
-        System.out.println(str);
+        System.out.println("Merged array: " + str);
 
     }
 

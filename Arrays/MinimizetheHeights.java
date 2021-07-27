@@ -19,7 +19,9 @@ public class MinimizetheHeights {
 //        int result = max - min;
 //        for (int i = 1; i < n; i++) // n-1 times
 //        {
+    // for max take last arr[n-1] & check with rest values which is max than it
 //            max = Math.max(arr[i - 1] + k, arr[n - 1] - k);
+    // for min take starting arr[0] & check with rest values which is min than it
 //            min = Math.min(arr[0] + k, arr[i] - k);
 //            result = Math.min(result, max - min);
 //        }
@@ -70,7 +72,6 @@ public class MinimizetheHeights {
             else
                 big = add;
         }
-
         return Math.min(ans, big - small);
     }
 

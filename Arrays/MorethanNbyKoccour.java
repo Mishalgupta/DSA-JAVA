@@ -33,9 +33,9 @@ public class MorethanNbyKoccour {
     }
 
     public static void main(String[] args) {
-//        int arr[] = { 3, 1, 2, 2, 1, 2, 3, 3 };
+        int arr[] = { 3, 1, 2, 2, 1, 2, 3, 3 };
 //        int arr[] = { 2, 3, 3, 2 };
-        int arr[] = { 1, 2, 2, 2, 3, 3 };
+//        int arr[] = { 1, 2, 2, 2, 3, 3 };
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the no.:");
         int k = sc.nextInt();

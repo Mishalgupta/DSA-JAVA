@@ -9,16 +9,9 @@ public class TriplateSumArray {
 //    Expected Auxiliary Space: O(1)
     // Method - Two Pointer approach
     public static int find3Numbers(int A[], int n, int X) {
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1; j++) {
-                if (A[j] > A[j + 1]) {
-                    int temp = A[j + 1];
-                    A[j + 1] = A[j];
-                    A[j] = temp;
-                }
-
-            }
-        }
+        // sort the array
+        Arrays.sort(A);
+        
 //        for (int item : A) {
         // System.out.print(item+" ");
 //        }

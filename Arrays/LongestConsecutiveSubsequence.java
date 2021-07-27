@@ -12,11 +12,11 @@ public class LongestConsecutiveSubsequence {
 //        Time complexity: O(nLogn). 
 //        Time to sort the array is O(nlogn).
 //        Auxiliary space : O(1). 
+
 //since : array starts from 0 so we need to add extra 1 in count
 //        int ans = 0, count = 1 + 1;
 //        Arrays.sort(arr);
 //        ArrayList<Integer> v = new ArrayList<Integer>();
-////        v.add(10);
 //
 //        // Insert repeated elements
 //        // only once in the array

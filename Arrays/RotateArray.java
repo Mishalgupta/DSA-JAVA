@@ -37,7 +37,6 @@ public class RotateArray {
         rotate(a, n);
         // StringBuider makes the string mutable
         // (can change/update in same reference object)
-
         // string creating using new keyword
 //        StringBuilder str = new StringBuilder();
 //        for (int i = 0; i < n; i++) {

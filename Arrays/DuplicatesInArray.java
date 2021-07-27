@@ -2,8 +2,9 @@ package Arrays;
 
 import java.util.*;
 
+// without modifying the array find the duplicate
 public class DuplicatesInArray {
-    // Method-1 using sorting n(log(n))
+    // Method-1 using sorting n(log(n)) // here we are modifying the array
     public static int findDuplicate(int[] nums) {
 //        int n = nums.length;
 //        for (int i = 1; i < n; i++) // n-1 Time

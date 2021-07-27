@@ -18,8 +18,8 @@ public class ChocalateDistributionProblem {
         System.out.println(a);
         int n1 = (int) (n);
 
-        // since we only give choclate to given students & exactly one to each,
-        // so we need to find min. of max. choclate & min. choclate given.
+        // since we only give chocolate to given students & exactly one to each,
+        // so we need to find min. of max. chocolate & min. chocolate given.
         for (int i = 0; i <= n1 - m1; i++) {
             diff = a.get(i + m1 - 1) - a.get(i);
             min = Math.min(diff, min);

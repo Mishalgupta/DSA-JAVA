@@ -8,20 +8,25 @@ package Arrays;
 //The individual elements of three sets can appear in any order. You are required to return the modified array.
 public class ThreeWayPartitioning {
 //This will not run as we don't have driver code
-    
+
 //Expected Time Complexity: O(n)
 //Expected Auxiliary Space: O(1)
     public static void threeWayPartition(int array[], int a, int b) {
         int n = array.length;
         int low = 0, high = n - 1, temp = 0;
         for (int i = 0; i <= high;) {
+            // If current element is smaller than range,
+            // put it on next available smaller position.
             if (array[i] < a) {
                 temp = array[i];
                 array[i] = array[low];
                 array[low] = temp;
                 low++;
                 i++;
-            } else if (array[i] > b) {
+            }
+            // If current element is greater than range,
+            // put it on next available greater position.
+            else if (array[i] > b) {
                 temp = array[i];
                 array[i] = array[high];
                 array[high] = temp;
@@ -36,6 +41,10 @@ public class ThreeWayPartitioning {
         int array[] = { 1, 2, 3, 3, 4 };
         int a = 1, b = 2;
         threeWayPartition(array, a, b);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+
+        }
     }
 
 }

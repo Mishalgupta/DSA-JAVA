@@ -57,8 +57,9 @@ public class ArrayIntersaction {
 //        The hasNext() is a method of Java Scanner class which returns true if this scanner has another token in its input.
 //        The next() is a method of Java Scanner class which finds and returns the next complete token from the scanner which is in using.
         while (it.hasNext()) {
-            ans[i++] = it.next();
-            System.out.print(ans[i - 1] + " ");
+            ans[i] = it.next();
+            System.out.print(ans[i] + " ");
+            i++;
         }
     }
 

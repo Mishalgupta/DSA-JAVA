@@ -37,37 +37,40 @@ public class CommonElementsThreeSortedArray {
 
 //     Method-2 Can you extend the idea of the 2-pointer approach to something like a 3 pointer approach?
 //    Maintain 3 pointers, one for each array and traverse till any of them reaches the end of the array.
-//        ArrayList<Integer> arr = new ArrayList<>();
-//        int i = 0, j = 0, k = 0;
-//        // Iterate through three arrays while all arrays have elements
-//        while (i < n1 && j < n2 && k < n3) {
-//            // If x = y and y = z, print any of them and move ahead
-//            // in all arrays
-//            if (A[i] == B[j] && C[j] == C[k]) {
-//                arr.add(A[i]);
-//                int temp = A[i];
-//                while (i < n1 && A[i] == temp) {
+//    static ArrayList<Integer> common(int A[], int B[], int C[], int n1, int n2, int n3) {
+//        {
+//            ArrayList<Integer> arr = new ArrayList<>();
+//            int i = 0, j = 0, k = 0;
+//            // Iterate through three arrays while all arrays have elements
+//            while (i < n1 && j < n2 && k < n3) {
+//                // If x = y and y = z, print any of them and move ahead
+//                // in all arrays
+//                if (A[i] == B[j] && B[j] == C[k]) {
+//                    arr.add(A[i]);
+//                    int temp = A[i];
+//                    while (i < n1 && A[i] == temp) {
+//                        i++;
+//                    }
+//                    while (k < n2 && A[i] == temp) {
+//                        j++;
+//                    }
+//                    while (k < n3 && A[i] == temp) {
+//                        k++;
+//                    }
+//
+//                } 
+//                // x < y
+//                else if (A[i] < B[j]) {
 //                    i++;
 //                }
-//                while (k < n2 && A[i] == temp) {
+//                // y < z
+//                else if (B[j] < C[k]) {
 //                    j++;
 //                }
-//                while (k < n3 && A[i] == temp) {
+//                // We reach here when x > y and z < y, i.e., z is smallest
+//                else {
 //                    k++;
 //                }
-//
-//            }
-//            // x < y
-//            else if (A[i] < B[j]) {
-//                i++;
-//            }
-//            // y < z
-//            else if (B[j] < C[k]) {
-//                j++;
-//            }
-//            // We reach here when x > y and z < y, i.e., z is smallest
-//            else {
-//                k++;
 //            }
 //            return arr;
 //        }
@@ -82,7 +85,7 @@ public class CommonElementsThreeSortedArray {
         int n3 = C.length;
         ArrayList<Integer> ar = common(A, B, C, n1, n2, n3);
         for (int i : ar) {
-            System.out.print(i);
+            System.out.print(i + " ");
         }
     }
 
