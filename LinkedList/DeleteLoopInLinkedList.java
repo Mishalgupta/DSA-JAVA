@@ -25,14 +25,20 @@ public class DeleteLoopInLinkedList {
                 break;
             }
         }
-        // exceptional case
-        // starting point of loop then any of fast or slow will iterate
+        // exceptional case:
+        // starting point of loop are both slow & fast
+        // then any of fast or slow will iterate &
+        // when any of slow or fast next is same as slow or fast
+        // then set it as null
         if (slow == head) {
+            // we can move either slow or fast
             while (slow.next != fast) {
                 slow = slow.next;
             }
             slow.next = null;
-        } else if (slow == fast)// if both matches then set slow at starting point
+        }
+        // when there is no case of head point
+        else if (slow == fast)// if both matches then set slow at starting point
         {
             slow = head;
             while (slow.next != fast.next) {
@@ -43,7 +49,7 @@ public class DeleteLoopInLinkedList {
         }
         return head;
     }
-    // Method-2 Hasing or map
+    // Method-2 Hashing or map
     // Time : O(n)
     // Space :O(n)
 //    public static boolean deleteLoop(Node head) {
@@ -85,7 +91,7 @@ public class DeleteLoopInLinkedList {
         start.next.next = new Node(15);
         start.next.next.next = new Node(4);
         start.next.next.next.next = new Node(10);
-//        start.next.next.next.next.next = new Node(6);
+        start.next.next.next.next.next = new Node(6);
 //        start.next.next.next.next.next.next = new Node(7);
 
         System.out.println("Linked List before removing loop");

@@ -69,9 +69,7 @@ public class RemoveDuplicatesFromUnsorted {
     }
 
     public static void main(String[] args) {
-        /*
-         * The constructed linked list is: 10->12->11->11->12->11->10
-         */
+//      The constructed linked list is: 10->12->11->11->12->11->10
         node start = new node(10);
         start.next = new node(12);
         start.next.next = new node(11);

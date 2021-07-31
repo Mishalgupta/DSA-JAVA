@@ -13,9 +13,7 @@ public class RemoveDuplicatesInSortedList {
         }
     }
 
-    /*
-     * Function to remove duplicates from a unsorted linked list
-     */
+//     Function to remove duplicates from a unsorted linked list
 
     // Method-1 Hashset
 //Expected Time Complexity: O(N)
@@ -24,7 +22,7 @@ public class RemoveDuplicatesInSortedList {
 //        // Hash to store seen values
 //        HashSet<Integer> hs = new HashSet<>();
 //
-//        /* Pick elements one by one */
+//        // Pick elements one by one
 //        node current = head;
 //        node prev = null;
 //        while (current != null) {
@@ -68,9 +66,7 @@ public class RemoveDuplicatesInSortedList {
     }
 
     public static void main(String[] args) {
-        /*
-         * The constructed linked list is: 10->10->11->11->12->13->14
-         */
+//      The constructed linked list is: 10->10->11->11->12->13->14
         node start = new node(10);
         start.next = new node(10);
         start.next.next = new node(11);

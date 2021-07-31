@@ -24,10 +24,10 @@ public class MoveLastElementToFront {
             sl = l;
             l = l.next;
         }
-        // after getting null at l.next set second last to null & last pointing to head
+        // after getting null at l.next, set second last to null & last pointing to head
         sl.next = null;
         l.next = head;
-        /* Change head to point to last node. */
+        // Change head to point to last node.
         head = l;
         return head;
     }

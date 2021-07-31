@@ -31,7 +31,7 @@ public class StartingPointDetectCycle {
 //        return null;
 //    }
 
-    // Method-2 floyd cycle fining algo.(turtle rabit algo.)
+    // Method-2 floyd cycle finding algo.(turtle rabit algo.)
 //    Time: O(n)
 //    Space: O(1)
     public static Node startingPoint(Node head) {
