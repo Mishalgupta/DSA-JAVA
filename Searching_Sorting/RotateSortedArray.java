@@ -17,13 +17,13 @@ public class RotateSortedArray {
             } else if (target == nums[high]) {
                 return high;
             } else if (nums[mid] >= nums[low]) {
-                if (target <= nums[mid] && nums[low] <= target) {
+                if (target >= nums[low] && target <= nums[mid]) {
                     high = mid - 1;
                 } else {
                     low = mid + 1;
                 }
             } else if (nums[mid] <= nums[low]) {
-                if (target >= nums[mid] && nums[high] >= target) {
+                if (target >= nums[mid] && target <= nums[high]) {
                     low = mid + 1;
                 } else {
                     high = mid - 1;

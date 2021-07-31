@@ -8,7 +8,8 @@ public class PairGivenDifference {
 //    Expected Time Complexity: O(L* Log(L)).
 //    Expected Auxiliary Space: O(1).
     public static boolean findPair(int arr[], int size, int n) {
-        // Method-1 binary search
+        // Method-1 binary search it's approx same as 2 method,
+        // but too avoid traversing duplicate elements this is best method.
         Arrays.sort(arr);
         for (int i = 0; i < size; i++) {
             // to avoid printing duplicates (skip adjacent duplicates)

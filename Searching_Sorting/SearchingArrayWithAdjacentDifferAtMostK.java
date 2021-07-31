@@ -13,6 +13,8 @@ public class SearchingArrayWithAdjacentDifferAtMostK {
                 return i;
             } else {
                 // this abs(absoulte) will always gives positive values(-ve to +ve kar dega)
+                // in normal way we just traversing the array one by one
+                // but to optimise the above method we simply jump by y step
                 int y = Math.max(1, Math.abs(arr[i] - x) / k);
                 i = i + y;
             }
@@ -21,10 +23,10 @@ public class SearchingArrayWithAdjacentDifferAtMostK {
     }
 
     public static void main(String[] args) {
-//        int arr[] = { 4, 5, 6, 7, 6 };
-//        int k = 1, x = 6;
-        int arr[] = { 20, 40, 50, 70, 70, 60 };
-        int k = 20, x = 60;
+        int arr[] = { 4, 5, 6, 7, 6 };
+        int k = 1, x = 6;
+//        int arr[] = { 20, 40, 50, 70, 70, 60 };
+//        int k = 20, x = 60;
         System.out.println("Index no.: " + array(arr, k, x));
 
     }

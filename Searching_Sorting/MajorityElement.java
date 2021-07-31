@@ -8,6 +8,7 @@ public class MajorityElement {
     static int majorityElement(int a[], int size) {
         int count = 0;
         int maj_element = 0;
+        // here we will find the maj_element
         for (int i = 0; i < size; i++) {
             if (count == 0) {
                 maj_element = a[i];
@@ -18,6 +19,7 @@ public class MajorityElement {
                 count -= 1;
             }
         }
+        // here we check if that element present more than n/2 times
         int count1 = 0;
         int X = size / 2;
         for (int i = 0; i < size; i++) {

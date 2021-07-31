@@ -5,7 +5,7 @@ public class AllocateMinPages {
     public static int findPages(int[] a, int n, int m) {
         // Method- Binary search
 // Expected Time Complexity: O(NlogN)
-//        Expected Auxilliary Space: O(1)
+// Expected Auxilliary Space: O(1)
 
         // if no. of students are greater than books then return -1
         if (n < m) {

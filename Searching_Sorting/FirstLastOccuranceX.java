@@ -11,6 +11,7 @@ public class FirstLastOccuranceX {
         ArrayList<Long> arr1 = new ArrayList<Long>();
         // Method Binary search O(logN)
         int s = -1, l = -1;
+        // checking for the first index
         int low = 0, high = n - 1;
         while (low <= high) {
             int mid = (low + (high - low) / 2);
@@ -24,12 +25,13 @@ public class FirstLastOccuranceX {
                 low = mid + 1;
             }
         }
+        // now checking for the last index
         low = 0;
         high = n - 1;
         while (low <= high) {
             int mid = (low + (high - low) / 2);
             if (x == arr[mid]) {
-                // array contain duplicates value & we need only the first occourance.
+                // array contain duplicates value & we need only the last occourance.
                 l = mid;
                 low = mid + 1;
             } else if (x < arr[mid]) {

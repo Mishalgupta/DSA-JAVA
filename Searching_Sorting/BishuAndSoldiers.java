@@ -17,9 +17,7 @@ public class BishuAndSoldiers {
             System.out.print(sum);
             System.out.print("\n");
         }
-        
-        //Method-2 Binary search 
-        //
+
     }
 
     public static void main(String[] args) {

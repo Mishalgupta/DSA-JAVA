@@ -32,10 +32,11 @@ public class PainterPartitionProblem {
         int painter = 1;
         long sum = 0;
         for (int i = 0; i < n; i++) {
-            sum = sum + a[i];
-            if (sum > res) {
+            if (sum + a[i] > res) {
                 painter++;
                 sum = a[i];
+            } else {
+                sum = sum + a[i];
             }
         }
         if (painter > k) {

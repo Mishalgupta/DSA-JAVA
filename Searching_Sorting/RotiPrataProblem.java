@@ -47,12 +47,12 @@ public class RotiPrataProblem {
     }
 
     public static void main(String[] args) {
-//        int a[] = { 1, 2, 3, 4 };
-//        int prata = 10;
+        int a[] = { 1, 2, 3, 4 };
+        int prata = 10;
 //        int a[] = { 1, 1, 1, 1, 1, 1, 1, 1 };
 //        int prata = 8;
-        int a[] = { 1 };
-        int prata = 8;
+//        int a[] = { 1 };
+//        int prata = 8;
         int n = a.length;
         System.out.println("Min. time to cook prata is: " + minTime(a, n, prata));
     }

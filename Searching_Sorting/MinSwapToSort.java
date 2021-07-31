@@ -23,6 +23,8 @@ public class MinSwapToSort {
                 count++;
                 int init = nums[i];
                 swap(nums, i, h.get(temp[i]));
+                // Update the indexes in
+                // the hashmap accordingly
                 h.put(init, h.get(temp[i]));
                 h.put(temp[i], i);
             }

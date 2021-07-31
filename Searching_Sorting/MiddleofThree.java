@@ -1,4 +1,5 @@
 package Searching_Sorting;
+
 //Given three distinct numbers A, B and C. Find the number with value in middle (Try to do it with minimum comparisons).
 public class MiddleofThree {
 //    Expected Time Complexity:O(1)

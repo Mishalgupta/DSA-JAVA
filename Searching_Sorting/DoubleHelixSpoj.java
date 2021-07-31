@@ -16,6 +16,7 @@ public class DoubleHelixSpoj {
                 sum2 += b[j];
                 j++;
             } else {
+                // can add either a[i] or a[j] as both are same
                 max = max + Math.max(sum1, sum2) + a[i];
                 sum1 = 0;
                 sum2 = 0;
@@ -23,6 +24,7 @@ public class DoubleHelixSpoj {
                 j++;
             }
         }
+        // if any of i or j finish so add remaining elements in the sum
         if (i > n) {
             while (j < m) {
                 sum2 = sum2 + b[j];
