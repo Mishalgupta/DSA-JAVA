@@ -22,36 +22,36 @@ public class MatrixSearch {
 //    }
 
         // Method-2 Binary search O(n*log m) space O(1)
-        int low = 0, high = (r * c) - 1;
-        while (low <= high) {
-            int mid = (low + (high - low) / 2); // to avoid overflow
-            // we get index by dividing mid by col no.
-            if (matrix[mid / c][mid % c] == k) {
-                return true;
-            } else if (matrix[mid / c][mid % c] < k) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-        return false;
-    }
-
-    // Method-3 two pointer
-    // Time complexity O(n)
-    // Space complexity O(1)
-//        int i = 0, j = c - 1;
-//        while (i < r && j >= 0) {
-//            if (matrix[i][j] == k) {
+//        int low = 0, high = (r * c) - 1;
+//        while (low <= high) {
+//            int mid = (low + (high - low) / 2);
+//            // to avoid overflow we get index by dividing mid by col no.
+//            if (matrix[mid / c][mid % c] == k) {
 //                return true;
-//            } else if (matrix[i][j] > k) {
-//                j--;
+//            } else if (matrix[mid / c][mid % c] < k) {
+//                low = mid + 1;
 //            } else {
-//                i++;
+//                high = mid - 1;
 //            }
 //        }
 //        return false;
 //    }
+
+        // Method-3 two pointer
+        // Time complexity O(n)
+        // Space complexity O(1)
+        int i = 0, j = c - 1;
+        while (i < r && j >= 0) {
+            if (matrix[i][j] == k) {
+                return true;
+            } else if (matrix[i][j] > k) {
+                j--;
+            } else {
+                i++;
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         int matrix[][] = { { 1, 3, 5, 7 }, { 10, 11, 16, 20 }, { 23, 30, 34, 60 } };
