@@ -54,7 +54,7 @@ public class IntersactionPointOfTwoLinkedList {
 //    Time complexity: O(m+n) 
 //    Auxiliary Space: O(1)
 
-    // function to find the length of the list
+    // function to find the length of both the list
     static int length(node head) {
         node t = head;
         int c = 0;

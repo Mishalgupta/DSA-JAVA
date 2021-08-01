@@ -47,16 +47,16 @@ public class SegregateEvenOddNodesInLinkedList {
 //        if (odd != null) {
 //            curodd.next = null;
 //        }
-        if (odd != null) {
-            curodd.next = even;
-        }
         if (even != null) {
-            cureven.next = null;
+            cureven.next = odd;
+        }
+        if (odd != null) {
+            curodd.next = null;
         }
         if (even == null) {
-            return even;
+            return odd;
         }
-        return odd;
+        return even;
     }
 
     /* Function to print nodes in a given linked list */
@@ -68,13 +68,13 @@ public class SegregateEvenOddNodesInLinkedList {
     }
 
     public static void main(String[] args) {
-        Node start = new Node(10);
-        start.next = new Node(12);
-        start.next.next = new Node(13);
-        start.next.next.next = new Node(14);
-        start.next.next.next.next = new Node(15);
-        start.next.next.next.next.next = new Node(16);
-        start.next.next.next.next.next.next = new Node(17);
+        Node start = new Node(17);
+        start.next = new Node(15);
+        start.next.next = new Node(8);
+        start.next.next.next = new Node(9);
+        start.next.next.next.next = new Node(2);
+        start.next.next.next.next.next = new Node(4);
+        start.next.next.next.next.next.next = new Node(6);
         System.out.println("Linkedlist elements before segregation");
         printList(start);
         Node rev = divide(start);

@@ -35,7 +35,6 @@ public class SplitCircularLinkedListIntoTwoHalves {
     }
 
     /* Function to print nodes in a given singly linked list */
-    /* Function to print nodes in a given singly linked list */
     static void printList(Node node) {
         Node temp = node;
         if (node != null) {

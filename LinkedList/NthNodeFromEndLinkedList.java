@@ -35,7 +35,7 @@ public class NthNodeFromEndLinkedList {
 //    }
 
     // Method-2 iterative method by taking two pointers
-//    (if we have to find with out calculating size & to be done in single iteration)
+//    (if we have to find without calculating size & to be done in single iteration)
     // Expected Time Complexity: O(N).
     // Expected Auxiliary Space: O(1).
 
@@ -46,13 +46,13 @@ public class NthNodeFromEndLinkedList {
             f = f.next;
         }
         while (f.next != null) {
+            f = f.next;
             s = s.next;
-            f = s.next;
         }
-        return s.val;
-
+        // here next is used because without this it will show prev val
+        return s.next.val;
     }
- 
+
     /* Function to print nodes in a given linked list */
     static void printList(node head) {
         while (head != null) {

@@ -39,6 +39,7 @@ public class PairWithGivenSumDLL {
     static void pairs(node head, int k) {
         node start = head;
         node end = head;
+        // move end pointer to the last node
         while (end.next != null) {
             end = end.next;
         }
@@ -65,14 +66,6 @@ public class PairWithGivenSumDLL {
         }
         if (found == false) {
             System.out.println("No pair sum found");
-        }
-    }
-
-    /* Function to print nodes in a given linked list */
-    static void printList(node head) {
-        while (head != null) {
-            System.out.print(head.val + " ");
-            head = head.next;
         }
     }
 

@@ -18,7 +18,8 @@ public class MiddleOfLinkedList {
 //        node arr[] = new node[100];
 //        int t = 0;
 //        while (head != null) {
-//            arr[t++] = head;
+//            arr[t] = head;
+//            t++;
 //            head = head.next;
 //        }
 //        node mid = arr[t / 2];
@@ -33,8 +34,7 @@ public class MiddleOfLinkedList {
 //        int c = 0;
 //        // first calculate length
 //        while (head != null) {
-//            // Update mid, when 'count'
-//            // is odd number
+//            // Update mid, when 'count' is odd number
 //            if (c % 2 == 1) {
 //                mid = mid.next;
 //            }

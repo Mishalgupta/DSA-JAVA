@@ -19,6 +19,7 @@ public class IntersectionTwoSortedLinkedLists {
         node t1 = head1;
         node t2 = head2;
         node temp = null;
+        // cur will used for iteration in resultant list.
         node cur = null;
         while (t1 != null && t2 != null) {
             if (t1.val == t2.val) {

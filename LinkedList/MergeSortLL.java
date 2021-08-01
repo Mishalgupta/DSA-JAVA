@@ -14,9 +14,9 @@ public class MergeSortLL {
 //Expected Time Complexity: O(NLogn).
 //Expected Auxiliary Space: O(N).
     static node mergeSort(node head) {
-        if (head.next == null)
+        if (head.next == null) {
             return head;
-
+        }
         node mid = findMid(head);
         node head2 = mid.next;
         mid.next = null;
