@@ -54,7 +54,7 @@ public class ConvertNormalBSTIntoBalancedBST {
     static Node buildTree(Node root) {
         // Store nodes of given BST in sorted order
         storeBSTNodes(root);
-        // Constructs BST from nodes[]
+        // Constructs BST from nodes[] in sorted order
         int n = arr.size();
         return buildTreeUtil(0, n - 1);
     }

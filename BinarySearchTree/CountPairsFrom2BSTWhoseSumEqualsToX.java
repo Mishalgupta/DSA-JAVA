@@ -19,7 +19,7 @@ public class CountPairsFrom2BSTWhoseSumEqualsToX {
 
     static int count = 0;
 
-// same concept is used which we used in search node in best
+// same concept is used which we used in search node in bst
     static boolean search(Node root2, int k) {
         if (root2 == null) {
             return false;
@@ -40,7 +40,8 @@ public class CountPairsFrom2BSTWhoseSumEqualsToX {
         if (root1 == null) {
             return;
         }
-        // taking inorder traversal of BST-1
+        // taking in-order traversal of BST-1 & subtract it's node with k
+        // after that search that k-node.data in root2, if exist then increase count.
         solve(root1.left, root2, k);
         if (search(root2, k - root1.data) == true) {
             count++;

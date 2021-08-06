@@ -46,7 +46,7 @@ public class DeleteNodeBst {
 //                root.data = lmax;
 //                root.left = delete(root.left, lmax);
 //            }
-            if (root.right != null && root.right != null) {
+            if (root.left != null && root.right != null) {
                 int rmax = max(root.right);
                 root.data = rmax;
                 root.right = delete(root.right, rmax);

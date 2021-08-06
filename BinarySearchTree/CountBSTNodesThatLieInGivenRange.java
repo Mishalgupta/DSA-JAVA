@@ -49,7 +49,7 @@ public class CountBSTNodesThatLieInGivenRange {
         root.right.right = new Node(100);
 
         int l = 5, h = 45;
-        System.out.println("Count os Bst nodes is: ");
+        System.out.println("Count of Bst nodes is: ");
         int res = count(root, l, h);
         System.out.println(res);
     }

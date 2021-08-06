@@ -68,13 +68,12 @@ public class ConstrctBSTFromPreorderTraversal {
     }
 
     public static void main(String[] args) {
-        int pre[] = new int[] { 10, 5, 1, 7, 40, 50 };
+        int pre[] = { 10, 5, 1, 7, 40, 50 };
 
         // Function call
         Node root = bstFromPreorder(pre);
         System.out.println("preorder traversal of the constructed tree is ");
         printpreorder(root);
-
     }
 
 }

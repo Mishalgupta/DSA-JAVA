@@ -89,7 +89,7 @@ public class MergeTwoBalancedBST {
 
     // Method that merges two trees into a single one.
     static Node mergeTrees(Node node1, Node node2) {
-        // temp1 stores inorder traversal of a tree
+        // temp1,temp2 stores inorder traversal of a tree
         ArrayList<Integer> temp1 = new ArrayList<>();
         // Stores Inorder of tree1 to list1
         ArrayList<Integer> list1 = storeInorder(node1, temp1);

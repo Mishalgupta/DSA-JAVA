@@ -29,6 +29,9 @@ public class MinDistanceBtwTwoNodesInBTree {
         if (left != null && right != null) {
             return root;
         }
+        if (left == null && right == null) {
+            return null;
+        }
         if (left != null) {
             return left;
         }
@@ -40,14 +43,17 @@ public class MinDistanceBtwTwoNodesInBTree {
         if (root == null) {
             return -1;
         }
+        // we return this dist finally after traversing left & right
         if (root.data == k) {
             return dist;
         }
+        // check on left side
         int left = path(root.left, k, dist + 1);
         // if k is present in left then return left else check in right side
         if (left != -1) {
             return left;
         }
+        // check on right side
         return path(root.right, k, dist + 1);
     }
 
@@ -56,7 +62,7 @@ public class MinDistanceBtwTwoNodesInBTree {
             return -1;
         }
         // here using lca we find the last common point of both nodes,
-        // & the take it as root for calculating min distance
+        // & the take it as root for calculating min distance.
         Node lca = LCA(root, a, b);
         int left = path(lca, a, 0);
         int right = path(lca, b, 0);

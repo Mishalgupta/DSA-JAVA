@@ -27,11 +27,12 @@ public class ReplaceEveryEleWithTheLeastGreaterToRight {
         // go to left subtree and set successor
         // as current node
         if (root.data > data) {
-            // set successor as the current node
+            // set successor as the current node & this will used in below function
+            // with the help of global succ variable.
             succ = root;
             root.left = insert(root.left, data);
         }
-        // Go to right subtree
+        // Go to right subtree & here we don't need to set predecessor
         else if (root.data < data) {
             root.right = insert(root.right, data);
         }
@@ -43,12 +44,12 @@ public class ReplaceEveryEleWithTheLeastGreaterToRight {
         for (int i = n - 1; i >= 0; i--) {
             succ = null;
             // Insert current element into BST and
-            // find its inorder successor
+            // find its in-order successor
             root = insert(root, arr[i]);
             if (succ != null) {
                 arr[i] = succ.data;
             }
-            // No inorder successor
+            // No in-order successor
             else {
                 arr[i] = -1;
             }

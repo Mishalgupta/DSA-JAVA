@@ -34,7 +34,6 @@ public class KthLargestElementInBST {
         count++;
         if (count == k) {
             ans = root.data;
-            return ans;
         }
         inorder(root.left, k);
         return ans;

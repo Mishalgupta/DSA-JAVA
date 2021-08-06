@@ -71,6 +71,9 @@ public class LCABinaryTree {
         if (leftLca != null && rightLca != null) {
             return root;
         }
+        if (leftLca == null && rightLca == null) {
+            return null;
+        }
         // if leftlca is present while rightlca is null
         if (leftLca != null) {
             return leftLca;
