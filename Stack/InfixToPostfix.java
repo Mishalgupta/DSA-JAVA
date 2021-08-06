@@ -29,18 +29,18 @@ public class InfixToPostfix {
             if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z' || s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
                 res = res + s.charAt(i);
             }
-            // if left parentheis then push to stack
+            // if left parenthesis then push to stack
             else if (s.charAt(i) == '(') {
                 st.push(s.charAt(i));
             }
-            // if right parentheis then pop to stack until left one found
+            // if right parenthesis then pop to stack until left one found
             else if (s.charAt(i) == ')') {
                 while (!st.isEmpty() && st.peek() != '(') {
-                    // continously pop from stack and add to postfix expression till we get '('
+                    // Continuously pop from stack and add to postfix expression till we get '('
                     res = res + st.peek();
                     st.pop();
                 }
-                // remove left paranthesis from staxk
+                // remove left parenthesis from stack
                 if (!st.isEmpty()) {
                     st.pop();
                 }
@@ -48,7 +48,7 @@ public class InfixToPostfix {
             // if operator received
             else {
                 while (!st.isEmpty() && prec(st.peek()) >= prec(s.charAt(i))) {
-                    // continously pop from stack and add to postfix expression each operator,
+                    // Continuously pop from stack and add to postfix expression each operator,
                     // having precedence greater or equal than coming element.
                     res = res + st.peek();
                     st.pop();

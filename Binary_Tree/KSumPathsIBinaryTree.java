@@ -37,7 +37,7 @@ public class KSumPathsIBinaryTree {
 
         // check if there's any k sum path that
         // terminates at this node
-        // Traverse the entire path
+        // Traverse the entire path reversely
         int f = 0;
         for (int j = path.size() - 1; j >= 0; j--) // O(h)
         {

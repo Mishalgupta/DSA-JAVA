@@ -24,7 +24,7 @@ public class LargestSumSubTree {
         }
         int l = solve(root.left);
         int r = solve(root.right);
-        // updating maxSum for every subtree
+        // updating maxSum for every subtree & finally return in the below function
         maxSum = Math.max(maxSum, l + r + root.data);
         return l + r + root.data;
     }
@@ -35,18 +35,13 @@ public class LargestSumSubTree {
     }
 
     public static void main(String[] args) {
-        // construct binary tree as shown in
-        // above diagram
-        
         Node root = new Node(1);
         root.left = new Node(-2);
-        /*
-                 1
-               /   \
-             -2     3
-             / \   /  \
-            4   5 -6   2
-        */
+//                 1
+//               /   \
+//             -2     3
+//             / \   /  \
+//            4   5 -6   2     
         root.right = new Node(3);
         root.left.left = new Node(4);
         root.left.right = new Node(5);

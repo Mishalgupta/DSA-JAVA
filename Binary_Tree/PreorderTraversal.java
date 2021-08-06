@@ -41,6 +41,7 @@ public class PreorderTraversal {
         }
         Stack<Node> stack = new Stack<>();
         stack.push(root);
+        // look while stack is not empty
         while (!stack.empty()) {
             Node curr = stack.pop();
             System.out.print(curr.data + " ");

@@ -16,7 +16,6 @@ public class BalancedParenthesis {
                 st.push(ch);
             } else if (ch == ')') {
                 if (!st.isEmpty() && st.peek() == '(') {
-
                     st.pop();
                 } else {
                     ans = false;

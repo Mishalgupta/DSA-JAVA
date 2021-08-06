@@ -23,7 +23,7 @@ public class DuplicateSubtree {
         if (root == null) {
             return "$";
         }
-        // string for storing the node value for comparision
+        // string for storing the node value for comparison
         String s = "";
         s = s + root.data;
         s = s + solve(root.left);

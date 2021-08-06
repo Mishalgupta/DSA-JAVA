@@ -22,7 +22,7 @@ public class StockSpanProblem {
 //        return res;
 //    }
 
-//  Method-2: using stack- neearest greater to left question method is used here.
+//  Method-2: using stack- nearest greater to left question method is used here.
     // here we don't need value , we need index which can be found by subtracting
     // index of given array with the stack index
 //  Expected Time Complexity : O(N)
@@ -53,8 +53,8 @@ public class StockSpanProblem {
     }
 
     public static void main(String[] args) {
-//        int arr[] = { 100, 80, 60, 70, 60, 75, 85 };
-        int arr[] = { 10, 4, 5, 90, 120, 80 };
+        int arr[] = { 100, 80, 60, 70, 60, 75, 85 };
+//        int arr[] = { 10, 4, 5, 90, 120, 80 };
         int n = arr.length;
 //        stockSpan(arr, n);
         int ans[] = stockSpan(arr, n);

@@ -3,7 +3,8 @@ package Queue;
 import java.util.*;
 
 public class CircularQueue {
-// Time Complexity:enQueue(), deQueue() operation is O(1) as there is no loop in any of the operation.
+// Time Complexity: enQueue(), deQueue() operation is O(1) 
+// as there is no loop in any of the operation.
 // Space: O(n)
     ArrayList<Integer> qu = new ArrayList<>();
     int size, front, rear;

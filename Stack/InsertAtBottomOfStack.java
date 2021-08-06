@@ -14,6 +14,7 @@ public class InsertAtBottomOfStack {
             return;
         }
         int res = st.peek();
+        // pop all items till stack is empty & then insert the x
         st.pop();
         pushAtBottom(x);
         // push all the items held in Function Call Stack

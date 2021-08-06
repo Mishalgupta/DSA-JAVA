@@ -40,8 +40,9 @@ public class PostOrderTraversal {
         }
         Stack<Node> stack = new Stack<>();
         stack.push(root);
-        // create another stack to store postorder traversal
+        // create another stack to store post-order traversal
         Stack<Integer> out = new Stack<>();
+        // look while stack is not empty
         while (!stack.empty()) {
             Node curr = stack.pop();
             out.push(curr.data);

@@ -29,7 +29,7 @@ public class IsomorphismTree {
         if (root1 == null || root2 == null) {
             return false;
         }
-        // if root of both are equal
+        // if root of both are not equal
         if (root1.data != root2.data) {
             return false;
         }

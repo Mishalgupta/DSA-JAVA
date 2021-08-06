@@ -61,10 +61,9 @@ public class LeafNodeAtSameLevelOrNot {
             return;
         }
         if (root.left == null && root.right == null) {
-            if (temp[0] == 1) {
+            if (temp[0] == -1) {
                 temp[0] = h;
-            }
-            if (temp[0] != h) {
+            } else if (temp[0] != h) {
                 res = false;
             }
             return;
@@ -76,7 +75,8 @@ public class LeafNodeAtSameLevelOrNot {
     static boolean leafNode(Node root) {
         int h = 0;
         int temp[] = new int[1];
-        temp[0] = 1;
+        // used for updating the height
+        temp[0] = -1;
         res = true;
         check(root, h, temp);
         return res;
@@ -93,7 +93,7 @@ public class LeafNodeAtSameLevelOrNot {
         root.left.right = new Node(15);
         root.right.right = new Node(15);
         root.right.left = new Node(12);
-//        root.right.right.left = new Node(14);
+        root.right.right.left = new Node(14);
         System.out.println("Leaf nodes are balanced: " + leafNode(root));
     }
 

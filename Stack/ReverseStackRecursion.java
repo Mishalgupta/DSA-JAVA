@@ -19,7 +19,7 @@ public class ReverseStackRecursion {
             // again pop till last stack is empty & store last element in temp.
             insert(x);
             // after reaching last add temp to stack
-            // push allthe items held
+            // push all the items held
             // in Function Call Stack
             // once the item is inserted
             // at the bottom
@@ -28,14 +28,15 @@ public class ReverseStackRecursion {
     }
 
     static void reverse() {
-        if (s.size() > 0) {
-            // here will pop the top element until we reach end of stack
-            int temp = s.peek();
-            s.pop();
-            reverse();
-            // after reaching stack end we insert the element stored in temp to stack
-            insert(temp);
+        if (s.isEmpty()) {
+            return;
         }
+        // here will pop the top element until we reach end of stack
+        int temp = s.peek();
+        s.pop();
+        reverse();
+        // after reaching stack end we insert the element stored in temp to stack
+        insert(temp);
     }
 
     public static void main(String[] args) {

@@ -24,12 +24,14 @@ public class InfixToPrefix {
 
         // reversed string for stack
         StringBuilder input = new StringBuilder(s);
+//        System.out.println(input.reverse());
         input.reverse();
 
         Stack<Character> st = new Stack<>();
         char[] charsExp = new String(input).toCharArray();
+        // since brackets also get reversed,
+        // so we need to again make them in proper position
         for (int i = 0; i < charsExp.length; i++) {
-
             if (charsExp[i] == '(') {
                 charsExp[i] = ')';
                 i++;

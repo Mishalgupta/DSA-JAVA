@@ -6,9 +6,9 @@ public class StackImplementUsingLinkedList {
         int data;
         Node next;
 
-        Node() {
+        Node(int val) {
             next = null;
-            this.data = 0;
+            this.data = val;
         }
     }
 
@@ -21,8 +21,9 @@ public class StackImplementUsingLinkedList {
 
     public void push(int x) {
 
-        // create new node temp and allocate memory
-        Node temp = new Node();
+        // create new node temp and allocate memory &
+        // initialize data into temp data field
+        Node temp = new Node(x);
 
         // check if stack (heap) is full
 //        (But in linked list space grows dynamically) as compared to arrays
@@ -31,9 +32,6 @@ public class StackImplementUsingLinkedList {
 //            System.out.println("\nStack overflow");
 //            return;
 //        }
-
-        // initialize data into temp data field
-        temp.data = x;
 
         // put top reference into temp next
         temp.next = top;
@@ -66,6 +64,7 @@ public class StackImplementUsingLinkedList {
             System.out.println("Stack is empty");
             return;
         }
+        // set top to null as top.next==null
         top = top.next;
     }
 
@@ -78,7 +77,7 @@ public class StackImplementUsingLinkedList {
             Node temp = top;
             while (temp != null) {
 
-                // print node data
+                // print node data till temp is null
                 System.out.printf(temp.data + " ");
 
                 // assign temp next to temp

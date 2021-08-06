@@ -65,7 +65,8 @@ public class TwoStackInArray {
         st.push2(7);
         System.out.print("popped fron stack 1: " + st.pop1());
         st.push2(40);
-        System.out.print("\npopped fron stack 1: " + st.pop2());
+        System.out.print("\npopped fron stack 2: " + st.pop2());
+        System.out.print("\npopped fron stack 2: " + st.pop2());
 
     }
 

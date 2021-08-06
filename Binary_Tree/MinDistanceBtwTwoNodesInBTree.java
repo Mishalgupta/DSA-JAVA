@@ -44,6 +44,7 @@ public class MinDistanceBtwTwoNodesInBTree {
             return dist;
         }
         int left = path(root.left, k, dist + 1);
+        // if k is present in left then return left else check in right side
         if (left != -1) {
             return left;
         }

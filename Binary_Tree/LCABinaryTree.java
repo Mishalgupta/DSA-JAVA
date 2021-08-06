@@ -22,12 +22,13 @@ public class LCABinaryTree {
 //        if (root == null) {
 //            return false;
 //        }
-//        // Store this node . The node will be removed if
-//        // not in path from root to n.
+////    Store this node.
+////    The node will be removed if not in path from root to n.
 //        path.add(root.data);
 //        if (root.data == key) {
 //            return true;
 //        }
+//    // check till last if key present or not
 //        if (getPath(root.left, key, path) || getPath(root.right, key, path)) {
 //            return true;
 //        }
@@ -53,6 +54,7 @@ public class LCABinaryTree {
 //            }
 //        return path1.get(i - 1);
 //    }
+
     // Method 2 - Using recursion (Using Single Traversal)
     // Expected Time Complexity: O(N)
     // Expected Auxiliary Space: O(N)
@@ -65,9 +67,11 @@ public class LCABinaryTree {
         }
         Node leftLca = lca(root.left, n1, n2);
         Node rightLca = lca(root.right, n1, n2);
+        // if both n1 & n2 present here then return root
         if (leftLca != null && rightLca != null) {
             return root;
         }
+        // if leftlca is present while rightlca is null
         if (leftLca != null) {
             return leftLca;
         }
@@ -86,7 +90,7 @@ public class LCABinaryTree {
         root.right.left = new Node(12);
         root.right.right = new Node(15);
         root.right.right.left = new Node(14);
-         System.out.println("LCA is: " + lca(root, 12, 14).data);
+        System.out.println("LCA is: " + lca(root, 12, 14).data);
 //        System.out.println("LCA is: " + lca(root, 12, 14));
     }
 

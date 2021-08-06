@@ -19,7 +19,7 @@ public class QueueBasicOperration {
     }
 
     void push(int x) {
-        if (back >= maxSize) {
+        if (back >= maxSize - 1) {
             System.out.println("Queue overflow");
             return;
         }

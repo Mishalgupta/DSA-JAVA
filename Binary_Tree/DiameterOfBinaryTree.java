@@ -25,9 +25,11 @@ public class DiameterOfBinaryTree {
         if (root == null) {
             return 0;
         }
+        // when diameter is through the root
         int lheight = height(root.left);
         int rheight = height(root.right);
         int currdiameter = lheight + rheight + 1;
+        // when diameter is not through the root.
         int ldiameter = diameter(root.left);
         int rdiameter = diameter(root.right);
         return Math.max(currdiameter, Math.max(ldiameter, rdiameter));

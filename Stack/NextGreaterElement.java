@@ -55,6 +55,7 @@ public class NextGreaterElement {
     }
 
     public static void main(String[] args) {
+//        int arr[] = { 1, 3, 2, 4 };
         int arr[] = { 1, 3, 2, 4 };
 //        int arr[] = { 11, 13, 21, 3 };
         int n = arr.length;

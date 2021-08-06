@@ -5,7 +5,7 @@ import java.util.Stack;
 public class SortStackUsingRecursion {
 //Method-1: normal stack sort using loops
 //    Expected Time Complexity : O(N*N)
-//    Expected Auixilliary Space : O(1).
+//    Expected Auxilliary Space : O(1).
     public static Stack<Integer> sort(Stack<Integer> s) {
         Stack<Integer> st = new Stack<Integer>();
         while (!s.isEmpty()) {
@@ -19,16 +19,7 @@ public class SortStackUsingRecursion {
     }
 
     // Method-2: Using recursion
-//    Expected Auixilliary Space : O(N) recursive.
-//    static void sort(Stack<Integer> st) {
-//        if (st.isEmpty()) {
-//            return;
-//        }
-//        int temp = st.peek();
-//        st.pop();
-//        sort(st);
-//        insert(st, temp);
-//    }
+//    Expected Auxiliary Space : O(N) recursive.
 //
 //    static void insert(Stack<Integer> st, int temp) {
 //        if (st.isEmpty() || st.peek() <= temp) {
@@ -39,6 +30,16 @@ public class SortStackUsingRecursion {
 //        st.pop();
 //        insert(st, temp);
 //        st.push(val);
+//    }
+
+//    static void sort(Stack<Integer> st) {
+//        if (st.isEmpty()) {
+//            return;
+//        }
+//        int temp = st.peek();
+//        st.pop();
+//        sort(st);
+//        insert(st, temp);
 //    }
 
     public static void main(String[] args) {
@@ -55,5 +56,4 @@ public class SortStackUsingRecursion {
             System.out.print(s.pop() + " ");
         }
     }
-
 }

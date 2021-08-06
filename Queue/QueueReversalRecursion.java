@@ -26,6 +26,7 @@ public class QueueReversalRecursion {
             int temp = s.peek();
             s.poll();
             rev(s);
+            // add all elements one by one back to queue
             s.add(temp);
         }
         return s;

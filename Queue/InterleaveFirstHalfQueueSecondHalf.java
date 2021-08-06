@@ -23,6 +23,7 @@ public class InterleaveFirstHalfQueueSecondHalf {
         // again enqueue elements from stack to queue
         // queue: 16 17 18 19 20 15 14 13 12 11
         while (!st.isEmpty()) {
+            // this st will peek using the lifo operation
             q.add(st.peek());
             st.pop();
         }
@@ -35,6 +36,7 @@ public class InterleaveFirstHalfQueueSecondHalf {
         // again push first half of the queue to stack
         // queue: 16 17 18 19 20, stack: 11(T) 12 13 14 15
         for (int i = 0; i < mid; i++) {
+            // this q will peek using the fifo operation
             st.push(q.peek());
             q.poll();
         }

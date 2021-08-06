@@ -19,8 +19,7 @@ public class BuildTreeFromInorderPreorder {
 //Preorder and Inorder traversals for worst-case are {A, B, C, D} and {D, C, B, A}. 
 //Expected Auxiliary Space: O(N)
     static int search(int inorder[], int start, int end, int curr) {
-        int i;
-        for (i = start; i <= end; i++) {
+        for (int i = start; i <= end; i++) {
             if (inorder[i] == curr) {
                 return i;
             }
@@ -28,13 +27,13 @@ public class BuildTreeFromInorderPreorder {
         return -1;
     }
 
-    static int index = 0;
+    static int index;
 
     static Node tree(int inorder[], int preorder[], int start, int end) {
         if (start > end) {
             return null;
         }
-        // stroing current value at the particular index
+        // storing current value at the particular index
         int curr = preorder[index];
         index++;
         Node root = new Node(curr);

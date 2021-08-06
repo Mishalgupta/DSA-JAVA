@@ -19,22 +19,22 @@ public class SumOfNodeOfLongestPathRootLeaf {
 
     static int maxHeight, maxSum;
 
-    static void findMaxSum(Node root, int cursum, int level) {
+    static void findMaxSum(Node root, int cursum, int curHeight) {
         if (root == null) {
-            if (maxHeight < level) {
-                maxHeight = level;
+            if (maxHeight < curHeight) {
+                maxHeight = curHeight;
                 maxSum = cursum;
-            } else if (maxHeight == level && maxSum < cursum) {
+            } else if (maxHeight == curHeight && maxSum < cursum) {
                 maxSum = cursum;
             }
             return;
         }
-        findMaxSum(root.left, root.data + cursum, level + 1);
-        findMaxSum(root.right, root.data + cursum, level + 1);
+        findMaxSum(root.left, root.data + cursum, curHeight + 1);
+        findMaxSum(root.right, root.data + cursum, curHeight + 1);
     }
 
     public static int sumOfLongRootToLeafPath(Node root) {
-        maxHeight = 0;
+        maxHeight = 0; // or level
         maxSum = 0;
         findMaxSum(root, 0, 0);
         return maxSum;
