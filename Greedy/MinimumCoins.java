@@ -3,7 +3,7 @@ package Greedy;
 import java.util.*;
 
 public class MinimumCoins {
-//    Time Complexity: O(v) in worst, where v is V Rs.
+//    Time Complexity: O(v) in worst if all changes are 1 of rs., where v is V Rs.
 //    Auxiliary Space: O(v) or nearly constant.
     static void findMin(int amount, int deno[]) {
         int n = deno.length;
@@ -25,8 +25,7 @@ public class MinimumCoins {
         int amount = 93;
         // All denominations of Indian Currency
         int deno[] = { 1, 2, 5, 10, 20, 50, 100, 500, 1000 };
-        System.out.print("Following is minimal number " + "of change for " + amount + ": ");
+        System.out.print("Following is minimal number of change for " + amount + ": ");
         findMin(amount, deno);
     }
-
 }

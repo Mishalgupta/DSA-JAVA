@@ -14,8 +14,8 @@ public class KthLargestElement {
         }
         for (int i = k; i < n; i++) {
             if (pq.peek() < arr[i]) {
-                pq.add(arr[i]);
                 pq.poll();
+                pq.add(arr[i]);
             }
         }
         // now we have k largest elements now store them in stack and find the largest

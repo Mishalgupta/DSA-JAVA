@@ -20,7 +20,8 @@ public class MinimumCostOfRopes {
         // While size of priority queue
         // is more than 1
         while (pq.size() > 1) {
-            // Extract shortest two ropes from pq
+            // Extract shortest two ropes from pq ,
+            // as elements are in the natural sorted order
             int first = pq.poll();
             int second = pq.poll();
 

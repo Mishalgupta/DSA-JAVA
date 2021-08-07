@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 public class MinimumCostRopes {
     // Method-Optimal merge pattern(OMP) greedy
 //  Expected Time Complexity : O(nlogn)
-//  Expected Auxilliary Space : O(n)
+//  Expected Auxiliary Space : O(n)
     static int minCost(int arr[], int n) {
         // Create a priority queue
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();

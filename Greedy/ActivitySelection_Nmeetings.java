@@ -5,11 +5,11 @@ import java.util.*;
 public class ActivitySelection_Nmeetings {
 //    Expected Time Complexity : O(N*LogN)
 //    Expected Auxilliary Space : O(N)
-    
+
     static class Pair {
         int start;
         int finish;
-        
+
         Pair(int c, int d) {
             start = c;
             finish = d;
@@ -27,7 +27,7 @@ public class ActivitySelection_Nmeetings {
             else if (p1.finish > p2.finish) {
                 return 1;
             }
-            return 1;
+            return 0;
         }
     }
 
@@ -40,7 +40,7 @@ public class ActivitySelection_Nmeetings {
         {
             arr.add(new Pair(start[i], end[i]));
         }
-        // we need to cutsom sort pair based on finishing time so we use comparator
+        // we need to custom sort pair based on finishing time so we use comparator
         Mycmp mc = new Mycmp();
         Collections.sort(arr, mc); // O(nlogn)
         int res = 1;

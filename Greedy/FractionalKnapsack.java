@@ -12,12 +12,11 @@ class Item {
 }
 
 //Expected Time Complexity : O(NlogN)
-//Expected Auxilliary Space: O(1)
-
+//Expected Auxiliary Space: O(1)
 class myComp implements Comparator<Item> {
     public int compare(Item a, Item b) {
         // finding value/weight for per unit fraction
-        // since while divding result may be in decimal so we took double
+        // since while dividing result may be in decimal so we took double
         double r1 = (double) (a.value) / (double) (a.weight);
         double r2 = (double) (b.value) / (double) (b.weight);
         // 1 means in order
@@ -27,9 +26,8 @@ class myComp implements Comparator<Item> {
         // -1 means not in order
         else if (r1 > r2) {
             return -1;
-        } else {
-            return 0;
         }
+        return 0;
     }
 }
 
@@ -37,6 +35,7 @@ public class FractionalKnapsack {
     // Function to get the maximum total value in the knapsack.
     static double fractionalKnapsack(int W, Item arr[], int n) {
         myComp mc = new myComp();
+        // sort them in descending order
         Arrays.sort(arr, mc);
         int curWt = 0;
         double res = 0.0;
@@ -47,6 +46,7 @@ public class FractionalKnapsack {
             } else {
                 int remain = W - curWt;
                 res += ((double) arr[i].value / (double) arr[i].weight) * (double) remain;
+                // here knapsack is completely filled so we creaked it
                 break;
             }
         }
@@ -54,8 +54,7 @@ public class FractionalKnapsack {
     }
 
     public static void main(String[] args) {
-        int[] wt = { 10, 40, 20, 30 };
-        int[] val = { 60, 40, 100, 120 };
+        Item it = new Item();
         int capacity = 50;
         int n = wt.length;
         double maxValue = fractionalKnapsack(capacity, val, n);
