@@ -36,8 +36,8 @@ public class CountTheReversal {
 //            c2 = c2 / 2;
 //        }
 //        return c1 + c2;
-//        ans = (int) (Math.ceil((left_brace) / 2) + Math.ceil((right_brace) / 2));
-//        return ans;
+////      ans = (int) (Math.ceil((c1) / 2) + Math.ceil((c2) / 2));
+////      return ans;
 //    }
 
     // Method-2
@@ -62,17 +62,16 @@ public class CountTheReversal {
 
 // Else if left bracket is 0 then we find unbalanced right bracket and increment
 // right bracket or if the expression is balanced then we decrement left.
-            else {
-                if (left_brace == 0) {
-                    right_brace++;
-                } else {
-                    left_brace--;
-                }
+            else if (left_brace == 0) {
+                right_brace++;
+            } else {
+                left_brace--;
             }
         }
         // returning ceil value
         ans = (int) (Math.ceil((left_brace) / 2) + Math.ceil((right_brace) / 2));
         return ans;
+
     }
 
     public static void main(String[] args) {

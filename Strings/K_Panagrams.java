@@ -2,7 +2,7 @@ package Strings;
 
 import java.util.*;
 
-//A pangram is a sentence containing every letter in the english alphabet
+//A pangram is a sentence containing every letter in the English alphabet
 public class K_Panagrams {
 //    Expected Time Complexity: O(N) where N is length of str.
 //    Expected Auxiliary Space: O(N)  
@@ -24,8 +24,10 @@ public class K_Panagrams {
     }
 
     public static void main(String[] args) {
-        String str = "the quick brown fox jumps over the lazy dog";
-        int k = 0;
+//        String str = "the quick brown fox jumps over the lazy dog";
+//        int k = 0;
+        String str = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
+        int k = 25;
         System.out.println("Pangram: " + kPangram(str, k));
     }
 

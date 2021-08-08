@@ -12,7 +12,7 @@ public class RotateString {
             return true;
         }
         // label continue will help to execute continue for outer loop
-        // as bydefault it is for inner loop only.
+        // as by-default it is for inner loop only.
         outer: for (int i = 0; i < s.length(); i++) {
             for (int j = 0; j < s.length(); j++) {
                 if (s.charAt((i + j) % s.length()) != goal.charAt(j)) {

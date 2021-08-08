@@ -22,6 +22,7 @@ public class SecondMostRepeatedStringInSequence {
         String res = "";
         for (Map.Entry<String, Integer> map : hs.entrySet()) {
             int value = (int) map.getValue();
+//            System.out.println(value);
             if (smax < value && value < max) {
                 smax = value;
                 res = (String) map.getKey();
@@ -31,7 +32,7 @@ public class SecondMostRepeatedStringInSequence {
     }
 
     public static void main(String[] args) {
-        String arr[] = { "aaa", " bbb", "ccc", "bbb", "aaa", "aaa" };
+        String arr[] = { "aaa", "bbb", "ccc", "bbb", "aaa", "aaa" };
         int N = arr.length;
         System.out.println("Second most repetative String is: " + secFrequent(arr, N));
     }

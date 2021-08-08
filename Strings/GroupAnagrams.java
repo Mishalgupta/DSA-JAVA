@@ -6,7 +6,7 @@ public class GroupAnagrams {
     // Method-using hashmap
 //    Expected Time Complexity: O(N*|S|*log|S|), where |S| is the length of the strings.
 //    Expected Auxiliary Space: O(N*|S|), where |S| is the length of the strings.
-    public static List<List<String>> Anagrams(String[] string_list) {
+    public static List<List<String>> Anagrams(String string_list[]) {
         List<List<String>> ans = new ArrayList<>();
 
         // adding elements to hashmap in new list if they are not present.
@@ -14,6 +14,7 @@ public class GroupAnagrams {
         HashMap<String, List<String>> hash = new HashMap<>();
 
         for (String i : string_list) {
+            // convert this string to array so that we can sort it
             char ch[] = i.toCharArray();
             // sort the char array using custom sorting comparator
             Arrays.sort(ch);

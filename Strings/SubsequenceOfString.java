@@ -21,7 +21,7 @@ public class SubsequenceOfString {
 // character will present or not.
         findsubsequences(s.substring(1), ans);
 
-// We add adding 1st character in string excluding 0th position character
+// We add adding 1st character in string 
         findsubsequences(s.substring(1), ans + s.charAt(0));
 
     }

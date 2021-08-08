@@ -10,15 +10,15 @@ public class MinNumberFlips {
         // First to have a sequence "010101..." and
         // second to have a sequence "1010101...".
         for (int i = 0; i < n; i++) {
-            // for 1st possiblity for odd 1st char should be 1 otherwise increase count
+            // for 1st possibility for odd 1st char should be 0 otherwise increase count
             // if even then first char should be 1 otherwise increase count
             if (i % 2 != 0 && S.charAt(i) == '0') {
                 c1++;
             } else if (i % 2 == 0 && S.charAt(i) == '1') {
                 c1++;
             }
-            // for 2nd possiblity for odd 1st char should be 1 otherwise increase count
-            // if even then first char should be 1 otherwise increase count
+            // for 2nd possibility for odd 1st char should be 1 otherwise increase count
+            // if even then first char should be 0 otherwise increase count
             if (i % 2 != 0 && S.charAt(i) == '1') {
                 c2++;
             } else if (i % 2 == 0 && S.charAt(i) == '0') {

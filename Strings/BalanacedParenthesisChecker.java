@@ -5,7 +5,7 @@ import java.util.Stack;
 public class BalanacedParenthesisChecker {
     // s=length of string
     // Expected Time Complexity: O(|s|)
-    // Expected Auixilliary Space: O(|s|)
+    // Expected Auxiliary Space: O(|s|)
     static boolean isValid(String s) {
         Stack<Character> st = new Stack<>();
         int n = s.length();
@@ -16,7 +16,6 @@ public class BalanacedParenthesisChecker {
                 st.push(ch);
             } else if (ch == ')') {
                 if (!st.isEmpty() && st.peek() == '(') {
-
                     st.pop();
                 } else {
                     ans = false;

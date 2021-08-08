@@ -14,7 +14,7 @@ public class IsomorphicStrings {
         int[] countChars1 = new int[256];
         int[] countChars2 = new int[256];
         for (int i = 0; i < n1; i++) {
-            // count of occourance of each character
+            // count of occurrence of each character
             countChars1[str1.charAt(i)]++;
             countChars2[str2.charAt(i)]++;
             // Two strings str1 and str2 are called isomorphic if there is

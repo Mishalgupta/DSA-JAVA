@@ -7,8 +7,8 @@ public class MinNoCharToBeDeletedForAnagramString {
         int arr[] = new int[256];
         // store the char count in the array
         for (int i = 0; i < str1.length(); i++) {
-            // acscii value of 'a' is 65 & b is 66.
-            // so , suppose 66-65=1 then this count will store in 1 index;
+            // ASCII value of 'a' is 65 & b is 66.
+            // so , suppose 66-65=1 then this count for 1 will store in arr index;
             arr[str1.charAt(i) - 'a']++;
         }
         // if char present in str2 then decrement the char count in arr

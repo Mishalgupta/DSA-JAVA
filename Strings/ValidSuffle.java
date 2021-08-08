@@ -24,14 +24,15 @@ public class ValidSuffle {
             else if (j < m && s2.charAt(j) == s3.charAt(k)) {
                 j++;
             }
-            // if the character doesn't matc
+            // if the character doesn't match
             else {
                 return false;
             }
             // access next character of result
             k++;
         }
-        // if i or j is not having same elements as in s3
+        // after accessing all characters of result
+        // if either s1 or s2 has some characters left
         if (i < s1.length() || j < s2.length()) {
             return false;
         }

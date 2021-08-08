@@ -28,7 +28,7 @@ public class DuplicateInStrings {
         // Method-2 here we use maps to store counts
         HashMap<Character, Integer> hash = new HashMap<Character, Integer>();
         for (int i = 0; i < str.length(); i++) {
-            // initialising for 1st key at 0
+            // Initializing for 1st key at 0
             if (!hash.containsKey(str.charAt(i))) {
                 hash.put(str.charAt(i), 1);
 //                System.out.println(hash.put(str.charAt(i), 1));

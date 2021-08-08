@@ -18,6 +18,9 @@ public class CountBinarySubstring {
 //                count1++;
 //            }
 //            if (count0 == count1) {
+//                // reseting the count- & count1
+//                count0 = 0;
+//                count1 = 0;
 //                cnt++;
 //            }
 //        }
@@ -37,9 +40,9 @@ public class CountBinarySubstring {
         for (int i = 1; i < n; i++) {
             if (str.charAt(i) != str.charAt(i - 1)) {
                 prevdup = curdup;
-                curdup = 1; // reset curdup for next sequenece
+                curdup = 1; // reset curdup for next sequence
             } else {
-                curdup++; // count the duplicate chracter
+                curdup++; // count the duplicate character
             }
             if (prevdup >= curdup) {
                 count++;
@@ -50,6 +53,7 @@ public class CountBinarySubstring {
 
     public static void main(String[] args) {
         String str = "0100110101";
+//        String str = "00110011";
         int n = str.length();
         System.out.println("total binary Substrings are: " + maxSubStr(str, n));
     }

@@ -19,6 +19,7 @@ public class ReverseWordsInGivenSring {
 //                i--;
 //            }
 //            if (str.isEmpty()) {
+    // this substring will print from i+1 (including) to j+1 (excluding)
 //                ans = ans.concat(str.substring(i + 1, j + 1));
 //            } else {
 //                ans = ans.concat('.' + str.substring(i + 1, j + 1));
@@ -26,7 +27,7 @@ public class ReverseWordsInGivenSring {
 //        }
 //        return ans;
 //    }
-    
+
     // Method-2
 //Expected Time Complexity: O(|S|)
 //Expected Auxiliary Space: O(|S|)

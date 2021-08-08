@@ -17,14 +17,16 @@ public class LongestNonRepeativeSubstring {
             }
             hs.add(ch);
             // i keeps the index of hashset & j is the elements remove from table
+            // we need i-j+1 because we need non-repetitive string,
+            // so we need to reset thecount after repeation comes
             max = Math.max(max, i - j + 1);
         }
         return max;
     }
 
     public static void main(String[] args) {
-//        String str = "geeksforgeeks";
-        String str = "aaaaaaaaaaaa";
+        String str = "geeksforgeeks";
+//        String str = "aaaaaaaaaaaa";
         System.out.println("char is: " + longestUniqueSubsttr(str));
     }
 

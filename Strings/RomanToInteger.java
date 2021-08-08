@@ -77,7 +77,7 @@ public class RomanToInteger {
 
     public static void main(String[] args) {
         String input = "MCMIV";
-        System.out.print("Integer form of Roman Numeral is: " + romanToInt(input));
+        System.out.print("Integer form of Roman Numeral " + input + " is: " + romanToInt(input));
     }
 
 }

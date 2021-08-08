@@ -17,7 +17,7 @@ public class CountAndSayPattern {
             // added to make sure that loop runs one extra iteration.
             str = str + "#";
 
-            // initialising count for matching chars
+            // Initializing count for matching chars
             int count = 1;
 
             // Initialize i'th term in series
@@ -27,7 +27,7 @@ public class CountAndSayPattern {
             for (int j = 1; j < str.length(); j++) {
                 // if current char doesn't match
                 if (ch[j] != ch[j - 1]) {
-                    // apend the count of ch[j-1]
+                    // append the count of ch[j-1]
                     temp = temp + count;
 
                     // append ch[j-1]
