@@ -12,7 +12,8 @@ public class FibonaiciiSeries {
         System.out.print(n1 + " " + n2 + " ");
         int fab;
         for (int i = 3; i <= n; i++) {
-            fab = n1 + n2;
+            // as the answer could be large so divide by modulo 10^7
+            fab = (n1 + n2) % 1000000007;
             n1 = n2;
             n2 = fab;
             System.out.print(fab + " ");

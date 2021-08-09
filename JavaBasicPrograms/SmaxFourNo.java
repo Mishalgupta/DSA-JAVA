@@ -22,22 +22,16 @@ public class SmaxFourNo {
         if (y > max) {
             smax = max;
             max = y;
-        } else {
-            if (y > smax) {
-                smax = y;
-            }
+        } else if (y > smax) {
+            smax = y;
         }
         if (z > max) {
             smax = max;
             max = z;
-        } else {
-            if (z > smax) {
-                smax = z;
-            }
+        } else if (z > smax) {
+            smax = z;
         }
         System.out.println("Smax=" + smax);
         sc.close();
-
     }
-
 }

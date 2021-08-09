@@ -11,7 +11,9 @@ public class TmaxFourNo {
         int x = sc.nextInt();
         int y = sc.nextInt();
         int z = sc.nextInt();
+        // from here we can get 3rd max
         int m1 = Math.min(Math.max(w, x), Math.max(y, z));
+        // from here we can get 3rd max
         int m2 = Math.max(Math.min(w, x), Math.min(y, z));
         if (m1 < m2) {
             System.out.println("Tmax=" + m1);

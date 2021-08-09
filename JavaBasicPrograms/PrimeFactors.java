@@ -11,6 +11,7 @@ public class PrimeFactors {
         for (int i = 2; n > 1; i++) {
             while (n % i == 0) {
                 System.out.print(i + " ");
+                // reset the n with the remaining values
                 n = n / i;
             }
         }

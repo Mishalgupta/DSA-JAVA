@@ -21,13 +21,10 @@ public class SmaxThreeNo {
         if (z > max) {
             smax = max;
             max = z;
-        } else {
-            if (z > smax) {
-                smax = z;
-            }
+        } else if (z > smax) {
+            smax = z;
         }
         System.out.println("Smax=" + smax);
         sc.close();
     }
-
 }

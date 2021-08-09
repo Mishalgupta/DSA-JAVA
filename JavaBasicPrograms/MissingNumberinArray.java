@@ -52,7 +52,7 @@ public class MissingNumberinArray {
     // Space O(1)
 //        We can compute the sum of nums in linear time, and by Gauss' formula, we can compute the sum of the first n natural numbers
 //        in constant time. Therefore, the number that is missing is simply the result of Gauss' formula minus the sum of nums,
-//        as nums consists of the first nn natural numbers minus some number.
+//        as nums consists of the first n natural numbers minus some number.
 
 //        int sum = nums.length * (nums.length + 1) / 2;
 //        int arraysum = 0;

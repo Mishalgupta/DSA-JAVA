@@ -9,18 +9,18 @@ public class ArmstrongNo {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a no.: ");
         int n = sc.nextInt();
-        int r = 0, rem, a;
-        a = n;// n value becomes zero in the loop so we need to asigning it in another
-              // variable
-              // so that we can used it further.
+        int res = 0, rem, a;
+        // n value becomes zero in the loop so we need to asigning it temp in another
+        // variable so that we can used it further.
+        a = n;
         while (n != 0) {
             rem = n % 10;
             n = n / 10;
-            r = r + (rem * rem * rem);
+            res = res + (rem * rem * rem);
         }
-        System.out.println(r);
-        System.out.println(n);
-        if (a == r) {
+//        System.out.println(res);
+//        System.out.println(n);
+        if (a == res) {
             System.out.println("Armstrong no.");
         } else {
             System.out.println("Not armstrong no.");

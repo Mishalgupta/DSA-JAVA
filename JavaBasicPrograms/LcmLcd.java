@@ -18,7 +18,6 @@ public class LcmLcd {
             }
         }
         System.out.println("Lcd is: " + L);
-
         sc.close();
     }
 

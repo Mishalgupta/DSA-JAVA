@@ -3,7 +3,8 @@ package JavaBasicPrograms;
 import java.util.Scanner;
 
 public class LeapYear {
-
+//Expected Time Complexity: O(1)
+//Expected Space Complexity: O(1)
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a year:");

@@ -7,24 +7,22 @@ public class BinarySearch {
     public static void main(String[] args) {
         int a[] = { 1, 2, 3, 4, 5, 6 };
         int n = a.length;
+        System.out.println("Enter no. to search");
         Scanner sc = new Scanner(System.in);
         int key = sc.nextInt();
-//        for (int i = 0; i < n; i++) {
-        int l = 0, h = n, mid;
+        boolean res = false;
+        int l = 0, h = n - 1, mid;
         while (l <= h) {
-            mid = (l + h) / 2;
+            mid = l + (h - l) / 2;
             if (key == a[mid]) {
-//                return mid;
+                res = true;
             } else if (key < a[mid]) {
-                h = mid + 1;
+                h = mid - 1;
             } else {
                 l = mid + 1;
             }
         }
-//        return 0;
-        for (int item : a) {
-            System.out.print(item + " ");
-        }
+        System.out.println(res);
         sc.close();
     }
 

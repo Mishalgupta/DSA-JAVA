@@ -8,7 +8,7 @@ public class BubbleSort {
 
         for (int i = 0; i < n - 1; i++) {
             boolean sorted = true;// for optimisation so that loop will run n-1 , n-2 ,n-3 times on each iteration
-            for (int j = 0; j < n - 1; j++) {
+            for (int j = 0; j < n - 1 - i; j++) {
                 if (a[j + 1] < a[j]) {
                     int temp = a[j + 1];
                     a[j + 1] = a[j];
