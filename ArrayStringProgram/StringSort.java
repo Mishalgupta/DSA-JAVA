@@ -19,6 +19,7 @@ public class StringSort {
             // harr round mai comparsion ki value kamm ho isliye n-round
             for (int i = 0; i < n - round; i++) {
                 int r = str[i].compareTo(str[i + 1]);
+                System.out.println(r);
                 if (r > 0) {
                     s = str[i];
                     str[i] = str[i + 1];

@@ -36,12 +36,14 @@ public class TwoDArrayDiagonal {
 //        sum of elements below diagonal
 //        i=1 => j=0
 //        i=2 => j=1,j=0
-//        for (int i = 0; i < 3; i++) {
-//            for (int j = i - 1; j >= 0; j--) {
-//                sum = sum + a[i][j];
-//            }
-//        }
-//        System.out.println("Sum of elements below diagonal is: " + sum);
+        for (int i = 0; i < 3; i++) {
+            if (i > 0) {
+                for (int j = i - 1; j >= 0; j--) {
+                    sum = sum + a[i][j];
+                }
+            }
+        }
+        System.out.println("Sum of elements below diagonal is: " + sum);
 
 //      sum of elements above diagonal
 //      i=0 => j=1,2
@@ -69,13 +71,13 @@ public class TwoDArrayDiagonal {
 //      j=0 => i=0,1,2
 //      j=1 => i=0,1,2
 //      j=2 => i=0,1,2
-        for (int i = 0; i < 3; i++) {
-            sum = 0;
-            for (int j = 0; j < 3; j++) {
-                sum = sum + a[j][i];
-            }
-            System.out.println("Sum of elements column " + i + " is: " + sum);
-        }
+//        for (int i = 0; i < 3; i++) {
+//            sum = 0;
+//            for (int j = 0; j < 3; j++) {
+//                sum = sum + a[j][i];
+//            }
+//            System.out.println("Sum of elements column " + i + " is: " + sum);
+//        }
         sc.close();
 
     }

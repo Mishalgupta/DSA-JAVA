@@ -13,7 +13,7 @@ public class ArrayTransfer {
         for (int i = 0; i <= 4; i++) {
             a[i] = sc.nextInt();
         }
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 0; i < 5; i++) {
             if (a[0] < a[i]) {
                 a[0] = a[i];
             }

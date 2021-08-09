@@ -20,17 +20,17 @@ public class ArrayHistogramPattern {
 //        ********
 //        ******
 //        *********
-//        for (int i = 0; i <= 4; i++) {
-//            for (int j = 1; j <= a[i]; j++) {
-//                System.out.print("*");
-//            }
-//            System.out.print("\n");
-//        }
+        for (int i = 0; i <= 4; i++) {
+            for (int j = 1; j <= a[i]; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
 
         // VERTICAL HISTOGRAM
 
 //        for (int j = 0; j <= 4; j++) {
-//            for (int i = 1; i <= a[i]; i++) {
+//            for (int i = 1; i < a[i]; i++) {
 //                System.out.print("*");
 //            }
 //            System.out.print("\n");
