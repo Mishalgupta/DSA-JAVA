@@ -17,10 +17,7 @@ class India {
 public class Anonymous {
 
     public static void main(String[] args) {
-        India  g2 = new India();
+        India g2 = new India();
         g2.g1.show();
-//
-//        India.g1 obj = India.new g1();
-//        obj.show();
     }
 }

@@ -17,10 +17,9 @@ package javapractice;
 //
 //    public static void main(String[] args) {
 //        Gc g1 = new Gc();
-//        String i2 = new String("A");
-//        g1.show(i2);
+//        g1.show("A");
 //        g1.set();
-//System.out.println("g1="+g1.set());
+//        System.out.println("g1=" + g1.set());
 //
 //    }
 //
@@ -30,11 +29,11 @@ package javapractice;
 class Gc<T> {
     T i;
 
-    public void show(T i1) {
+    public void set(T i1) {
         this.i = i1;
     }
 
-    public T set() {
+    public T show() {
         return (i);
     }
 }
@@ -46,9 +45,9 @@ public class GenericClass {
 //        Gc<Double> g2 = new Gc<Double>();
         String i2 = new String("A");
 //        Double i2 = new Double("A");
-        g1.show(i2);
+        g1.set(i2);
 //        g2.show(i3);
-        System.out.println("g1=" + g1.set());
+        System.out.println("g1=" + g1.show());
 //        System.out.println("g2="+g2.set());
 
     }

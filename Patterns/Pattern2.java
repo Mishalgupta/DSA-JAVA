@@ -202,9 +202,7 @@ public class Pattern2 {
 //            }
 //            char c = 'A';
 //            for (int j = n - i; j >= 0; j--) {
-//                if (j != n)
-//                    System.out.print((char) (c + j));
-//                      
+//                System.out.print((char) (c + j));
 //            }
 //            System.out.print("\n");
 //        }
@@ -250,8 +248,6 @@ public class Pattern2 {
 //      *
 //     *A*
 //    *B*B*
-//        NOT WORKING!!!!!
-
 //        char ch = 'A';
 //        for (int i = 1; i <= n; i++) {
 //            for (int j = 1; j <= n - i; j++) {
@@ -264,7 +260,9 @@ public class Pattern2 {
 //                    System.out.print("*");
 //                }
 //            }
-//            ch++;
+//            if (i > 1) {
+//                ch++;
+//            }
 //            System.out.print("\n");
 //        }
 
@@ -300,7 +298,7 @@ public class Pattern2 {
 //            }
 //            for (int j = 1; j <= i; j++) {
 //                System.out.print(ch);
-//                ch++;
+//                ch++; 
 //            }
 //            for (int j = 1; j <= i; j++) {
 //                System.out.print(j);
@@ -343,8 +341,8 @@ public class Pattern2 {
 //        210
 //        10
 //        0
-//        for (int i = 0; i < 7; i++) {
-//            for (int j = (6 - i); j >= 0; j--) {
+//        for (int i = 0; i < n; i++) {
+//            for (int j = n - i - 1; j >= 0; j--) {
 //                System.out.print(j);
 //            }
 //            System.out.print("\n");
@@ -354,11 +352,11 @@ public class Pattern2 {
 //        BA
 //        CBA
 //        DCBA
-//        char ch;
 //        for (int i = 1; i <= n; i++) {
-//            ch = (char) (64 + i);
+//            char ch = (char) (64 + i);
 //            for (int j = 1; j <= i; j++) {
-//                System.out.print(ch--);
+//                System.out.print(ch);
+//                ch--;
 //            }
 //            System.out.print("\n");
 //        }
@@ -390,42 +388,42 @@ public class Pattern2 {
 //     ***  
 //     **   
 //     *   
-//        for (int i = 1; i <= 3 * n; i++) {
-//            for (int j = 1; j <= (2 * n - 1); j++) {
-//                if (i <= n) {
-//                    if (j >= 2 * n - i) {
-//                        System.out.print("*");
-//                    } else {
-//                        System.out.print(" ");
-//                    }
-//                } else if (i <= 2 * n) {
-//                    int k = 0;
-//                    if (j == n) {
-//                        k = 1;
-//                        System.out.print("|");
-//                    }
-//                    if (j <= (i - n - 1)) {
-//                        k = 1;
-//                        System.out.print("*");
-//                    }
-//                    if (j >= (i)) {
-//                        k = 1;
-//                        System.out.print("*");
-//                    }
-//                    if (k == 0) {
-//                        System.out.print(" ");
-//                    }
-//                } else if (i <= 3 * n) {
-//                    if (j <= (3 * n + 1) - i) {
-//                        System.out.print("*");
-//                    } else {
-//                        System.out.print(" ");
-//                    }
-//
-//                }
-//            }
-//            System.out.print("\n");
-//        }
+        for (int i = 1; i <= 3 * n; i++) {
+            for (int j = 1; j <= (2 * n - 1); j++) {
+                if (i <= n) {
+                    if (j >= 2 * n - i) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                } else if (i <= 2 * n) {
+                    int k = 0;
+                    if (j == n) {
+                        k = 1;
+                        System.out.print("|");
+                    }
+                    if (j <= (i - n - 1)) {
+                        k = 1;
+                        System.out.print("*");
+                    }
+                    if (j >= (i)) {
+                        k = 1;
+                        System.out.print("*");
+                    }
+                    if (k == 0) {
+                        System.out.print(" ");
+                    }
+                } else if (i <= 3 * n) {
+                    if (j <= (3 * n + 1) - i) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+
+                }
+            }
+            System.out.print("\n");
+        }
 
 //        1
 //       A B

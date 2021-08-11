@@ -13,13 +13,11 @@ public class FileBuffer {
         System.out.println("Written Sucessfully");
 
 //        *****Buffered Reader*******
-        int i;
         FileReader r1 = new FileReader("D:/JAVA Practice/name1.txt");
         BufferedReader br1 = new BufferedReader(r1, 5);
-//        while ((i = br1.read()) != -1) {
+//        while ((int i = br1.read()) != -1) {
 //            System.out.print((char) i);
 //        }
-//        
 
 //        ****Another Method of reading lines from file*****
 //        String s1;

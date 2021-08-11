@@ -27,7 +27,7 @@ public class FileClass {
         int i;
 //        FileInputStream fin = new FileInputStream(f1);
         FileInputStream fin = new FileInputStream("D:/JAVA Practice/name1.txt");
-//        while((i=fin.read())!=-1) {
+//        while(i=fin.read()!=-1) {
 //            System.out.print((char)i);
 //        }
 

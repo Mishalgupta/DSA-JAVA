@@ -14,13 +14,15 @@ class Genericc {
 //    }
 
     public <T> void printArray(T[] s) {
+        // Normal loop
 //        for (int i = 0; i < s.length; i++) {
 //            System.out.print(s[i]);
 //        }
-        
-        for (T X:s) {
-            System.out.print(X);
-        } //for each loop
+
+        // for each loop
+        for (T i : s) {
+            System.out.println(i);
+        }
     }
 
 }
