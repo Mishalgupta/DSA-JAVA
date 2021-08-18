@@ -14,24 +14,22 @@ public class MinSumSubarray {
         int start = 0, sum = 0;
         for (int i = 0; i < nums.length; i++) {
             sum = sum + nums[i];
-            while (sum >= target) {
+            while (sum > target) {
                 result = Math.min(result, i + 1 - start);
                 sum = sum - nums[start];
                 start++;
             }
         }
-        return (result != Integer.MAX_VALUE) ? result : 0;
+        return result;
 
     }
 
     public static void main(String[] args) {
-        int nums[] = { 2, 3, 1, 2, 4, 3 };
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter value:"); // 7 then 2 length subarray is answer
-        int target = sc.nextInt();
-        System.out.println(minSubArrayLen(target, nums));
-        sc.close();
-
+        int nums[] = { 1, 4, 45, 6, 0, 19 };
+        int target = 51;
+//        int nums[] = { 1, 10, 5, 2, 7 };
+//        int target = 9;
+        System.out.println("Min. subarray length is: " + minSubArrayLen(target, nums));
     }
 
 }
