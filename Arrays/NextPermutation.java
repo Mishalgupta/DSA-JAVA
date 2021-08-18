@@ -29,6 +29,7 @@ public class NextPermutation {
         // again traverse from last and check which is just greater than i
         if (i >= 0) {
             int j = nums.length - 1;
+            // if not greater than i than decrement the j till condition satisfy
             while (nums[j] <= nums[i]) {
                 j--;
             }
@@ -47,7 +48,7 @@ public class NextPermutation {
     }
 
     public static void main(String[] args) {
-        int nums[] = { 1, 2, 3 };
+        int nums[] = { 3, 2, 1 };
         nextPermutation(nums);
         System.out.println("Next greater permutation is: ");
         print(nums);

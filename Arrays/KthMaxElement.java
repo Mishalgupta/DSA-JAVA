@@ -5,16 +5,9 @@ import java.util.*;
 public class KthMaxElement {
     // Method-1
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Array Size");
-        int n = sc.nextInt();
-        System.out.println("Enter k");
-        int k = sc.nextInt();
-        int a[] = new int[n];
-        System.out.println("Enter array elements");
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-        }
+        int a[] = { 12, 5, 787, 1, 23 };
+        int k = 3;
+        int n = a.length;
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int i = 0; i < n; i++) {
             if (i < k) {
@@ -27,16 +20,23 @@ public class KthMaxElement {
 //                System.out.println(pq);
             }
         }
-//        System.out.println(pq);
-        // since we need max so we need to make it reverseOrder()
-        // as PQ is by default set for min.
-        ArrayList<Integer> arr = new ArrayList<Integer>(pq);
-        Collections.sort(arr, Collections.reverseOrder());
+        // now we have k largest elements now store them in stack and find the largest
+        // one
+        int[] res = new int[k];
+        int index = 0;
+        Stack<Integer> st = new Stack<>();
+        while (!pq.isEmpty()) {
+            st.push(pq.poll());
+        }
+        // pop from stack so the elements are now in reverse order means Max. at first
+        // pop the kth element and return
+        while (!st.isEmpty()) {
+            res[index++] = st.pop();
+        }
         System.out.print("Top k max elements are: ");
-        for (int i : arr) {
+        for (int i : res) {
             System.err.print(i + " ");
         }
-        sc.close();
     }
 
 }

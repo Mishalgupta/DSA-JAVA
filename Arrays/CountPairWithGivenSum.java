@@ -32,6 +32,7 @@ public class CountPairWithGivenSum {
                 j--;
 //                System.out.println(j--);
             } else {
+                // reset the j to last
                 j = n - 1;
                 i++;
             }

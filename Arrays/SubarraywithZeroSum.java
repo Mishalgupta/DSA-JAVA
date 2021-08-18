@@ -15,8 +15,8 @@ public class SubarraywithZeroSum {
     static boolean findsum(int arr[], int n) {
         int sum = 0;
         Set<Integer> a = new HashSet<Integer>();
-        for (int i : arr) {
-            sum = sum + i;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
             if (a.contains(sum) || sum == 0) {
                 return true;
             } else {
@@ -27,9 +27,9 @@ public class SubarraywithZeroSum {
     }
 
     public static void main(String[] args) {
-//        int arr[] = { 4, 2, -3, 1, 6 };
+        int arr[] = { 4, 2, -3, 1, 6 };
 //        int arr[] = { 4, 2, 0, 1, 6 };
-        int arr[] = { 4, 2, 1, 6 };
+//        int arr[] = { 4, 2, 1, 6 };
         int n = arr.length;
         System.out.println(findsum(arr, n));
 

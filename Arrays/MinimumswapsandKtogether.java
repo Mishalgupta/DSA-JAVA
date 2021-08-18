@@ -54,7 +54,7 @@ public class MinimumswapsandKtogether {
     }
 
     public static void main(String[] args) {
-//        int arr[] = { 2, 1, 5, 6, 3 };
+//      int arr[] = { 2, 1, 5, 6, 3 };
         int arr[] = { 2, 7, 9, 5, 8, 7, 4 };
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the no.");

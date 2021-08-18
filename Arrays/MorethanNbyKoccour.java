@@ -10,12 +10,13 @@ public class MorethanNbyKoccour {
 //        System.out.println(num);
         for (int i = 0; i < arr.length; i++) {
             if (map.containsKey(arr[i])) {
-                // this will count the no. of occours at each key.
+                // this will count the no. of element occours at each key.
                 int count = map.get(arr[i]);
                 map.put(arr[i], count + 1);
 //                System.out.println(map.get(arr[i]));
 //                System.out.println(count);
             } else {
+                // if element comes first time then set it's count to 1
                 map.put(arr[i], 1);
 //                System.out.println(map.put(arr[i], 1));
             }
@@ -24,7 +25,7 @@ public class MorethanNbyKoccour {
         // hashmap.
         for (Map.Entry<Integer, Integer> map1 : map.entrySet()) {
             // here we can't use int in objects so we have to use Integer
-            Integer temp = (Integer) map1.getValue();
+            Integer temp = map1.getValue();
             if (temp > num) {
                 occour = occour + 1;
             }

@@ -1,47 +1,39 @@
 package MatrixTwoDArray;
 
+import java.util.*;
+
 public class CommonElePresentAllRows {
 
-    public static int findCommonElements(int mat[][]) {
-        int N = mat.length;
-        int M = mat[0].length;
-        for (int j = 0; j < M; j++) {
-            int mincommon = mat[0][j];
-            int i = 1;
-            for (; i < N; i++) {
-                if (binarySearch(mat[i], mincommon)) {
-                    continue;
-                } else {
-                    break;
+    public static void findCommonElements(int mat[][], int n, int m) {
+        Map<Integer, Integer> mp = new HashMap<>();
+
+        // initialize 1st row elements with value 1
+        for (int j = 0; j < m; j++) {
+            mp.put(mat[0][j], 1);
+        }
+        // starting from 2nd row & compare it with 1st
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+
+                // If element is present in the map and
+                // is not duplicated in current row.
+                if (mp.containsKey(mat[i][j]) && mp.get(mat[i][j]) == i) {
+                    // we increment count of the element in map by 1
+                    mp.put(mat[i][j], i + 1);
+
+                    // If this is last row
+                    if (i == n - 1) {
+                        System.out.print(mat[i][j] + " ");
+                    }
                 }
             }
-            if (mincommon == i) {
-                return mincommon;
-            }
         }
-        return -1;
-    }
-
-    private static boolean binarySearch(int mat[], int k) {
-        int low = 0, high = mat.length - 1;
-        while (low <= high) {
-            int mid = (low + (high - low) / 2); // to avoid overflow
-            // we get index by dividing mid by col no.
-            if (mat[mid] == k) {
-                return true;
-            } else if (mat[mid] < k) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-        return false;
     }
 
     public static void main(String[] args) {
-        int mat[][] = { { 1, 3, 5, 7 }, { 10, 11, 16, 20 }, { 23, 30, 34, 60 } };
-        System.out.println("Common element: " + findCommonElements(mat));
-
+        int mat[][] = { { 1, 2, 1, 4, 8 }, { 3, 7, 8, 5, 1 }, { 8, 7, 7, 3, 1 }, { 8, 1, 2, 7, 9 }, };
+        int n = mat.length;
+        int m = mat[0].length;
+        findCommonElements(mat, n, m);
     }
-
 }

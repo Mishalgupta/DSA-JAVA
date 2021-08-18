@@ -26,6 +26,8 @@ public class BestTimetoBuySellStock {
 
         // Brute force approach O(n^2) time complexity as loop runs n(n-1)/2
 //        Space complexity : O(1) Only two variables maxprofit and profit are used.
+//        int n = prices.length;
+//        int maxprice = 0;
 //        for (int i = 0; i < n - 1; i++) // n-1 times
 //        {
 //            for (int j = i + 1; j < n; j++) // n times

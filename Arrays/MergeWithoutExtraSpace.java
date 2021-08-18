@@ -57,8 +57,8 @@ public class MergeWithoutExtraSpace {
 //  Expected Time Complexity: O((n+m)*log(n+m))
 //  Expected Auxiliary Space: O(1)
 //        int i = n - 1, j = 0;
-//        while (i >= 0 && j < m) {
-//            if (arr1[i] > arr2[j]) {
+//        while (i >= 0 && j < m){
+//            if (arr1[i] > arr2[j]){
 //                int temp = arr1[i];
 //                arr1[i] = arr2[j];
 //                arr2[j] = temp;

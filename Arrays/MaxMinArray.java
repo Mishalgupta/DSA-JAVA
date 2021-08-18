@@ -21,6 +21,7 @@ public class MaxMinArray {
 //        int i;
     // if only 1 element is there
 //        if (n == 1) {
+// accessing static class method using minmax
 //            minmax.max = arr[0];
 //            minmax.min = arr[0];
 //            return minmax;

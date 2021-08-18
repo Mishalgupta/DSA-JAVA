@@ -23,7 +23,7 @@ public class ChocalateDistributionProblem {
         for (int i = 0; i <= n1 - m1; i++) {
             diff = a.get(i + m1 - 1) - a.get(i);
             min = Math.min(diff, min);
-            System.out.println(min);
+//            System.out.println(min);
         }
         return min;
     }

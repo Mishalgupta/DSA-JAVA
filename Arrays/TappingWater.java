@@ -10,8 +10,8 @@ public class TappingWater {
         int ans = 0;
         int left[] = new int[n];
         int right[] = new int[n];
-        // doo array banayege ek starting se max element dekhega and ek last se. last
-        // mai dono mai se min jo usme se array subtract kar dege.
+        // doo array banayege ek starting se max element dekhega and ek last se.
+        // last mai dono mai se min ayega usme se array subtract kar dege.
         left[0] = arr[0];
         for (int i = 1; i < n; i++) {
             left[i] = Math.max(left[i - 1], arr[i]);

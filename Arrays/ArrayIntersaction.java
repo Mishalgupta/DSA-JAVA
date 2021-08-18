@@ -3,23 +3,8 @@ package Arrays;
 import java.util.*;
 
 public class ArrayIntersaction {
-//    public static void intersaction(int a[], int b[], int n, int m) {
-//        int i = 0, j = 0;
-//        while (i < n && j < m) // o(m+n) time complexity
-//        {
-//            if (a[i] < b[j]) {
-//                i++;
-//            } else if (a[i] > b[j]) {
-//                j++;
-//            } else {
-//                System.out.print(a[i]);
-//                i++;
-//                j++;
-//            }
-//        }
-//    }
 
-    // Method-2 For unsorted arrays O(n) Time & O(n) Space
+    // Method-1 For unsorted arrays O(n) Time & O(n) Space
 //        Set<Integer> hs = new HashSet<Integer>();
 ////        Set<Integer> hs1 = new HashSet<Integer>();
 //
@@ -68,9 +53,6 @@ public class ArrayIntersaction {
 //        int b[] = { 1, 2, 3 };
         int a[] = { 1, 1, 2, 2, 3, 3, 3, 5 };
         int b[] = { 1, 2, 1, 3, 2, 2, 3 };
-//        int n = a.length;
-//        int m = b.length;
-//        intersaction(a, b, n, m);
         intersection(a, b);
 
     }

@@ -6,6 +6,8 @@ package Arrays;
 public class MinMergeOperationsTomakeArrayPalindrome {
 // Time: O(n)
 // space: O(1)    
+//    Therefore this problem can be solved iteratively using two pointers (first pointer pointing to start of the array and
+//    second pointer pointing to the last element of the array) method and keeping count of total merging operations done till now.
     public static int merge(int arr[], int n) {
         int count = 0;
         for (int i = 0, j = n - 1; i <= j;) // n times
@@ -37,10 +39,8 @@ public class MinMergeOperationsTomakeArrayPalindrome {
         return count;
     }
 
-//    Therefore this problem can be solved iteratively using two pointers (first pointer pointing to start of the array and
-//    second pointer pointing to the last element of the array) method and keeping count of total merging operations done till now.
     public static void main(String[] args) {
-//        int arr[] = new int[] { 15, 4, 15 };
+//        int arr[] = { 15, 4, 15 };
 //        int arr[] = { 1, 4, 5, 11 };
         int arr[] = { 11, 14, 15, 99 };
         int n = arr.length;

@@ -57,11 +57,7 @@ public class ArrangeNegativeOneSide {
             // Condition to check if both the elements are positive
             else if (arr[left] > 0 && arr[right] > 0) {
                 right--;
-            } else {
-                left++;
-                right--;
             }
-
         }
     }
 
