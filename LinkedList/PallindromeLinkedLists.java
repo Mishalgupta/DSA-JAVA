@@ -76,7 +76,7 @@ public class PallindromeLinkedLists {
     public static void main(String[] args) {
         node start = new node(5);
         start.next = new node(1);
-//        start.next.next = new node(5);
+        start.next.next = new node(5);
 //        start.next.next.next = new node(4);
 //        start.next.next.next.next = new node(5);
 //        start.next.next.next.next.next = new node(6);

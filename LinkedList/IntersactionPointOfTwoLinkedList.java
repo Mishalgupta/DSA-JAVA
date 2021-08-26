@@ -15,7 +15,7 @@ public class IntersactionPointOfTwoLinkedList {
 
 //    Method 1:Simply use two loops
     // time: O(n*m)
-    // space(1)
+    // space:O(1)
 //    public static int intersectPoint(node head1, node head2) {
 //        node temp1 = head1;
 //        while (temp1 != null) {
@@ -130,7 +130,7 @@ public class IntersactionPointOfTwoLinkedList {
         printList(head2);
 
         // intersact point creating
-        System.out.println("\nAfter merging");
+        System.out.println("\nAfter merging 2nd list will be: ");
         intersact(head1, head2, 3);
         printList(head2);
 

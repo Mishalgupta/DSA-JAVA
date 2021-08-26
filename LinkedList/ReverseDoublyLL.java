@@ -24,12 +24,10 @@ public class ReverseDoublyLL {
             return head;
         }
         node curr = head;
-        node next1 = null;
         node prev1 = null;
-
 //      swap next and prev for all nodes of doubly linked list
         while (curr != null) {
-            next1 = curr.next;
+            node next1 = curr.next;
             curr.next = prev1;
             curr.prev = next1;
             prev1 = curr;

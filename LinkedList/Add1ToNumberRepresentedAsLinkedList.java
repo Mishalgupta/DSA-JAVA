@@ -44,6 +44,7 @@ public class Add1ToNumberRepresentedAsLinkedList {
             } else {
                 temp.val = temp.val + 1;
                 temp = temp.next;
+                // directly out from loop
                 f = false;
             }
         }

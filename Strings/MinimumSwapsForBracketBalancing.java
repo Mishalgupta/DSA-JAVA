@@ -25,7 +25,7 @@ public class MinimumSwapsForBracketBalancing {
             } else if (chars[i] == ']') {
                 // increment count of Right bracket
                 countRight++;
-                // imbalance is reset to current difference between Left and Right brackets
+                // imbalance is reset to current difference between Right and Left brackets
                 imbalance = (countRight - countLeft);
             }
         }

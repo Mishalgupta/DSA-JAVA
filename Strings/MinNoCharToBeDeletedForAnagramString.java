@@ -17,6 +17,8 @@ public class MinNoCharToBeDeletedForAnagramString {
         }
 
         int ans = 0;
+        // calculate sum of all values which are not present in str2
+        // then return that sum.
         for (int i = 0; i < arr.length; i++) {
             ans += Math.abs(arr[i]);
         }

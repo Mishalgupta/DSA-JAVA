@@ -9,26 +9,26 @@ public class DuplicateInStrings {
 //    Time Complexity: O(n), where n = length of the string passed
 //    Space Complexity: O(NO_OF_CHARS)
     public static void printDups(String str) {
-//        Method-1
+////        Method-1
 //        int count[] = new int[NO_OF_CHARS];
-//        this will count the character occourence
+////        this will count the character occourence
 //        for (int i = 0; i < str.length(); i++) {
 //            count[str.charAt(i)]++;
 //        }
-//        System.out.println(count[str.charAt(i)]);
 //        for (int i = 0; i < NO_OF_CHARS; i++) {
 //            if (count[i] > 1) {
-//                System.out.println((char) i + "," + count[i]);
+//                // converting i to char (ASCII value)
+//                System.out.println((char) i + " = " + count[i]);
 //            }
 //        }
-
+//    }
 //        Thus, Space Complexity is potentially high for such cases. 
 //        So, to avoid any discrepancies and to improve Space Complexity, maps are generally preferred over long-sized arrays. 
 
         // Method-2 here we use maps to store counts
         HashMap<Character, Integer> hash = new HashMap<Character, Integer>();
         for (int i = 0; i < str.length(); i++) {
-            // Initializing for 1st key at 0
+            // Initializing for 1 occourance
             if (!hash.containsKey(str.charAt(i))) {
                 hash.put(str.charAt(i), 1);
 //                System.out.println(hash.put(str.charAt(i), 1));

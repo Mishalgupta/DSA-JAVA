@@ -41,12 +41,6 @@ public class SegregateEvenOddNodesInLinkedList {
             }
             dumhead = dumhead.next;
         }
-//        if (even != null) {
-//            cureven.next = odd;
-//        }
-//        if (odd != null) {
-//            curodd.next = null;
-//        }
         if (even != null) {
             cureven.next = odd;
         }
@@ -54,8 +48,10 @@ public class SegregateEvenOddNodesInLinkedList {
             curodd.next = null;
         }
         if (even == null) {
+            // odd head
             return odd;
         }
+        // evem head
         return even;
     }
 

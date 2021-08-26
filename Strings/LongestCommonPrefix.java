@@ -5,6 +5,7 @@ public class LongestCommonPrefix {
 //    Time complexity : O(S)
 //    Space complexity : O(1)
     public static String longestCommonPrefix(String[] strs) {
+        // if string is null or having length 0
         if (strs == null || strs.length == 0) {
             return null;
         }
@@ -12,10 +13,12 @@ public class LongestCommonPrefix {
             char c = strs[0].charAt(i);
             for (int j = 1; j < strs.length; j++) {
                 // return when i is equal to length of strs or char is not equal
-                if (i == strs[j].length() || strs[j].charAt(i) != c)
+                if (i == strs[j].length() || strs[j].charAt(i) != c) {
                     return strs[0].substring(0, i);
+                }
             }
         }
+        // if whole string match the return it
         return strs[0];
     }
 

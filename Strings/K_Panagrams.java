@@ -26,7 +26,7 @@ public class K_Panagrams {
     public static void main(String[] args) {
 //        String str = "the quick brown fox jumps over the lazy dog";
 //        int k = 0;
-        String str = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
+        String str = "aaaaaaaaaaaaaaaaaaaaaaaaa";
         int k = 25;
         System.out.println("Pangram: " + kPangram(str, k));
     }

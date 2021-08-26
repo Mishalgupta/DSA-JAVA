@@ -18,7 +18,7 @@ public class PallindromeString {
 //        }
 //    }
 
-    // method -2 recursive
+    // method-2 recursive
     // Time : O(n)
     static int solve(char ch[], int l, int r) {
         if (l >= r) {
@@ -39,7 +39,7 @@ public class PallindromeString {
     }
 
     public static void main(String[] args) {
-//        String str = new String("Mishal");
+//      String str = new String("Mishal");
         String str = new String("abba");
         System.out.println("String is pallindome: " + isplaindrome(str));
 

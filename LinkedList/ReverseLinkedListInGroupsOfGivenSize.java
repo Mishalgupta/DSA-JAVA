@@ -36,7 +36,7 @@ public class ReverseLinkedListInGroupsOfGivenSize {
 //            c = c - k;
 //        }
 //        return dummy.next;
-//}
+//    }
 
     // Method-2 iterative method(if no issue of k multiple)
     // Expected Time Complexity: O(N).
@@ -52,6 +52,7 @@ public class ReverseLinkedListInGroupsOfGivenSize {
             c++;
         }
         if (next != null) {
+            // attaching head of prev reversed array to next one
             head.next = reverse(next, k);
         }
         return prev;

@@ -44,9 +44,6 @@ public class RemoveDuplicatesInSortedList {
 //Expected Time Complexity: O(N)
 //Expected Auxiliary Space: O(1)
     static void removeDuplicate(node head) {
-//        if (head == null && head.next == null) {
-//            
-//        }
         node cur = head;
         while (cur.next != null) {
             if (cur.data == cur.next.data) {

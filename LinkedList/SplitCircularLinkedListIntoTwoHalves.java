@@ -6,11 +6,11 @@ public class SplitCircularLinkedListIntoTwoHalves {
     static class Node {
 
         int data;
-        Node next, prev;
+        Node next;
 
         Node(int d) {
             data = d;
-            next = prev = null;
+            next = null;
         }
     }
 
@@ -18,9 +18,8 @@ public class SplitCircularLinkedListIntoTwoHalves {
 //Expected Time Complexity: O(N)
 //Expected Auxilliary Space: O(1)
     static void splitList(Node head) {
-        Node slow = head;
-        Node fast = head.next;
-        while (fast != head && fast.next != head) {
+        Node slow = head, fast = head;
+        while (fast.next != head && fast.next.next != head) {
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -51,12 +50,12 @@ public class SplitCircularLinkedListIntoTwoHalves {
         start.next.next = new Node(13);
         start.next.next.next = new Node(14);
         start.next.next.next.next = new Node(15);
-//        start.next.next.next.next.next = new Node(16);
-        start.next.next.next.next.next = start;
+        start.next.next.next.next.next = new Node(16);
+        start.next.next.next.next.next.next = start;
         System.out.println("Original Circular Linked list ");
         printList(start);
 
-//         Split the list
+//       Split the list
         splitList(start);
         System.out.println();
         System.out.println("First Circular List ");
@@ -64,6 +63,5 @@ public class SplitCircularLinkedListIntoTwoHalves {
         System.out.println("");
         System.out.println("Second Circular List ");
         printList(head2);
-
     }
 }

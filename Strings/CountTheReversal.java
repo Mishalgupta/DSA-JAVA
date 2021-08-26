@@ -36,8 +36,6 @@ public class CountTheReversal {
 //            c2 = c2 / 2;
 //        }
 //        return c1 + c2;
-////      ans = (int) (Math.ceil((c1) / 2) + Math.ceil((c2) / 2));
-////      return ans;
 //    }
 
     // Method-2
@@ -45,7 +43,6 @@ public class CountTheReversal {
 //    Auxiliary Space: O(1)
     static int countRev(String s) {
         int n = s.length();
-        int ans;
 
         // Expressions of odd lengths cannot be balanced
         if (n % 2 != 0) {
@@ -68,14 +65,23 @@ public class CountTheReversal {
                 left_brace--;
             }
         }
-        // returning ceil value
-        ans = (int) (Math.ceil((left_brace) / 2) + Math.ceil((right_brace) / 2));
-        return ans;
+        if (right_brace % 2 != 0) {
+            right_brace = (right_brace / 2) + 1;
+        } else {
+            right_brace = right_brace / 2;
+        }
+        if (left_brace % 2 != 0) {
+            left_brace = (left_brace / 2) + 1;
+        } else {
+            left_brace = left_brace / 2;
+        }
+        return right_brace + left_brace;
 
     }
 
     public static void main(String[] args) {
-        String expr = "}}{{";
+//        String expr = "}}{{";
+        String expr = "}{{}}{{{";
         System.out.println("Total no. of reversal: " + countRev(expr));
     }
 
