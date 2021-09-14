@@ -34,6 +34,7 @@ public class ReverseFirstKElementsOfQueue {
     // Function to reverse first k elements of a queue.
     public static Queue<Integer> modifyQueue(Queue<Integer> s, int k) {
         s = rev(s);
+//        System.out.println(s);
         return revK(s, k);
     }
 

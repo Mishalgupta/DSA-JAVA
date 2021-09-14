@@ -2,7 +2,7 @@ package Searching_Sorting;
 
 public class Insertion_sort {
 
-    // Time: O(N"2)
+    // Time: O(N^2)
     // space: O(1)
     static void insert(int arr[], int i) {
         // if prev element is less than current element
