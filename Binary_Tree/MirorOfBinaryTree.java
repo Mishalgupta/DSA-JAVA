@@ -41,8 +41,7 @@ public class MirorOfBinaryTree {
     }
 
     public static void main(String[] args) {
-        // construct binary tree as shown in
-        // above diagram
+        // construct binary tree as shown in above diagram
         Node root = new Node(5);
         root.left = new Node(3);
         root.right = new Node(6);

@@ -2,7 +2,7 @@ package Binary_Tree;
 
 public class TopViewOfBinaryTree {
 
-//  Method-Using queue
+// Method-Using queue
 //Expected Time Complexity: O(N)
 //Expected Auxiliary Space: O(N)
     // Binary tree node

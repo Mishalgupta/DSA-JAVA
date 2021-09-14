@@ -14,10 +14,17 @@ public class RotateArray {
             arr[i] = arr[i - 1];
         }
         arr[0] = temp;
+
+//        int i, temp;
+//        temp = arr[0];
+//        for (i = 0; i < n - 1; i++) {
+//            arr[i] = arr[i + 1];
+//        }
+//        arr[i] = temp;
     }
 
     public static void main(String[] args) {
-        int a[] = { 1, 2, 3, 4, 5 };
+        int a[] = { 1, 2, 3, 4, 5};
         int n = a.length;
         int d = 2;
         rotateLeft(a, d, n);
