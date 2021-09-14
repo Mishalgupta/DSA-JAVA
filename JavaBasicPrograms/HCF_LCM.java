@@ -4,10 +4,10 @@ public class HCF_LCM {
 //    Expected Time Complexity: O(log(min(A, B))
 //    Expected Auxiliary Space: O(1)
     static Long gcd(Long a, Long b) {
-        if (a == 0) {
-            return b;
+        if (b == 0) {
+            return a;
         }
-        return gcd(b % a, a);
+        return gcd(b, a % b);
     }
 
     static Long lcm(Long a, Long b) {
