@@ -6,20 +6,14 @@ public class SubsetSumProblem {
     // Auxiliary Space: O(N*sum of elements)
     public static boolean isSubsetSum(int N, int arr[], int sum) {
         boolean dp[][] = new boolean[N + 1][sum + 1];
-        // Initialization! matrix with true/false instead of 0
         for (int i = 0; i < N + 1; i++) {
             for (int j = 0; j < sum + 1; j++) {
+                // Initialization! matrix with true/false instead of 0
                 if (i == 0) {
                     dp[i][j] = false;
-                }
-                if (j == 0) {
+                } else if (j == 0) {
                     dp[i][j] = true;
-                }
-            }
-        }
-        for (int i = 1; i < N + 1; i++) {
-            for (int j = 1; j < sum + 1; j++) {
-                if (arr[i - 1] <= j) {
+                } else if (arr[i - 1] <= j) {
                     dp[i][j] = dp[i - 1][j - arr[i - 1]] || dp[i - 1][j];
                 } else if (arr[i - 1] > j) {
                     dp[i][j] = dp[i - 1][j];
@@ -35,9 +29,9 @@ public class SubsetSumProblem {
         int sum = 9;
         boolean res = isSubsetSum(N, arr, sum);
         if (res == true) {
-            System.out.println(1);
+            System.out.println("Yes");
         } else {
-            System.out.println(0);
+            System.out.println("NoF");
         }
     }
 

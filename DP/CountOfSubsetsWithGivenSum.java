@@ -8,17 +8,12 @@ public class CountOfSubsetsWithGivenSum {
         int dp[][] = new int[N + 1][sum + 1];
         for (int i = 0; i < N + 1; i++) {
             for (int j = 0; j < sum + 1; j++) {
-                if (i == 0) {
-                    dp[i][j] = 0;
-                }
                 if (j == 0) {
                     dp[i][j] = 1;
-                }
-            }
-        }
-        for (int i = 1; i < N + 1; i++) {
-            for (int j = 1; j < sum + 1; j++) {
-                if (arr[i - 1] <= j) {
+                } else if (i == 0) {
+                    dp[i][j] = 0;
+                } else if (arr[i - 1] <= j) {
+                    // here we need to check count for all the cases that's why we use + here.
                     dp[i][j] = dp[i - 1][j - arr[i - 1]] + dp[i - 1][j];
                 } else if (arr[i - 1] > j) {
                     dp[i][j] = dp[i - 1][j];
