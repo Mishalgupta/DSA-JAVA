@@ -6,7 +6,6 @@ public class LCSubsequence {
 
     // Method1-Recursive Brute force
 //  Expected Time Complexity: O(2^N).
-//  Expected Auxiliary Space: O(1)
 
 //Case 1: The item is included in the optimal subset.
 //Case 2: The item is not included in the optimal set.
@@ -16,7 +15,7 @@ public class LCSubsequence {
 //            return 0;
 //        }
 //        // if matches then reduce both x,y and add +1 in lcs
-//        if (s1.charAt(x - 1) == s2.charAt(y - 1)) {
+//        else if (s1.charAt(x - 1) == s2.charAt(y - 1)) {
 //            return 1 + lcs(x - 1, y - 1, s1, s2);
 //        }
 //        // if not matches then take max. subsequence after reducing each
@@ -67,18 +66,18 @@ public class LCSubsequence {
         int dp[][] = new int[x + 1][y + 1];
 
         // Loop to initially filled the table with -1
-        for (int i = 0; i < x + 1; i++) {
-            for (int j = 0; j < y + 1; j++) {
+        for (int i = 0; i <= x; i++) {
+            for (int j = 0; j <= y; j++) {
                 if (i == 0 || j == 0) {
                     dp[i][j] = 0;
                 }
                 // if matches then reduce both x,y and add +1 in lcs
-                if (s1.charAt(x - 1) == s2.charAt(y - 1)) {
-                    dp[i][j] = 1 + dp[x - 1][y - 1];
+                else if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+                    dp[i][j] = 1 + dp[i - 1][j - 1];
                 }
                 // if not matches then take max. subsequence after reducing each
                 else {
-                    dp[i][j] = Math.max(dp[x - 1][y], dp[x][y - 1]);
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
                 }
             }
         }
@@ -86,8 +85,8 @@ public class LCSubsequence {
     }
 
     public static void main(String[] args) {
-        String s1 = "ABC";
-        String s2 = "AC";
+        String s1 = "HEAP";
+        String s2 = "PEA";
         int x = s1.length(), y = s2.length();
         int res = lcs(x, y, s1, s2);
         System.out.println("Lcs is: " + res);
